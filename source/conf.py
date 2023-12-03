@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Working With Git'
-copyright = '2023, Jonas I. Liechti'
+copyright = '2023, T4D GmbH'
 author = 'Jonas I. Liechti'
 release = '0.1'
 
