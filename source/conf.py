@@ -1,5 +1,4 @@
 # Configuration file for the Sphinx documentation builder.
-#
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
@@ -16,8 +15,11 @@ release = '0.1'
 
 extensions = [
     "myst_parser",
+    "sphinx_design",
     "sphinx_favicon",
 ]
+
+myst_enable_extensions = ["colon_fence"]
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -34,6 +36,7 @@ html_theme_options = {
     "path_to_docs": "source/",
     "use_edit_page_button": True,
     "use_repository_button": True,
+    "use_sidenotes": True,
     "toc_title": "Content",
     "logo": {
         "image_light": "_static/Badge_v4_bw.svg",
