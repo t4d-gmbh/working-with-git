@@ -17,6 +17,7 @@ release = '0.1'
 extensions = [
     "myst_parser",
     "sphinx_favicon",
+    "sphinx_design",
 ]
 
 templates_path = ['_templates']
@@ -35,6 +36,7 @@ html_theme_options = {
     "use_edit_page_button": True,
     "use_repository_button": True,
     "toc_title": "Content",
+    "use_sidenotes": True,
     "logo": {
         "image_light": "_static/Badge_v4_bw.svg",
         "image_dark": "_static/Badge_v4_wb.svg",
@@ -43,4 +45,8 @@ html_theme_options = {
 
 favicons = [
     "Badge_v4_bw.svg"
+]
+
+myst_enable_extensions = [
+    "colon_fence",
 ]
