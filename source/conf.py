@@ -18,6 +18,7 @@ extensions = [
     "myst_parser",
     "sphinx_favicon",
     "sphinx_design",
+    "sphinx_tabs.tabs",
 ]
 
 templates_path = ['_templates']
@@ -28,6 +29,7 @@ exclude_patterns = []
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
+html_css_files = ['custom.css',]
 
 html_theme_options = {
     "repository_url": "https://github.com/t4d-gmbh/working-with-git",
@@ -40,7 +42,7 @@ html_theme_options = {
     "logo": {
         "image_light": "_static/Badge_v4_bw.svg",
         "image_dark": "_static/Badge_v4_wb.svg",
-        }
+        },
 }
 
 favicons = [
