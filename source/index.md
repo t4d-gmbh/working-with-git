@@ -15,23 +15,23 @@ git/update_cycle
 :maxdepth: 2
 :caption: Git Workflow
 
-git/index
+git/about
 ```
 ```{toctree}
 :maxdepth: 2
 :caption: Collaboration with Git
 
-git/index
+git/about
 ```
 ```{toctree}
 :maxdepth: 2
 :caption: DevOps Software
 
-git/index
+git/about
 ```
 ```{toctree}
 :maxdepth: 2
 :caption: Automation
 
-git/index
+git/about
 ```
