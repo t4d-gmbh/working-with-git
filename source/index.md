@@ -3,12 +3,13 @@
 
 ```{toctree}
 :maxdepth: 2
-:caption: Git
+:caption: Git Workflow
 
 git/about
 git/workflow
 git/elementary_commands
 git/update_cycle
+git/useful_commands
 ```
 
 ```{toctree}
