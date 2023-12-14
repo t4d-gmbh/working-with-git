@@ -29,6 +29,7 @@ A successful collaboration and development strategy should cultivate healthy sta
 :::{card} Best practices (1/4)
 - Identify one branch on one location to be the main reference[^sn1]
 - Never develop directly on the main reference
+- Never modify shared history
 - Try to consolidate branches whenever possible
 - Verify the functionality of the resulting state **before** you incorporate a branches into the main reference 
 :::
@@ -83,9 +84,9 @@ As a consequence we want to fill commits with just enough changes to perform a m
 As a developer working with `git` the most noticeable _documentation_ activity is writing commit messages.
 
 What is worth pointing out is that **a commit message describes the changes introduced by the commit** and thus, **the state of a repository remains undocumented**.
-This can making it difficult to identify healthy states, and, as a consequence, some effort in describing the state of a repository should be made:
+This can make it difficult to identify healthy states, and, as a consequence, some effort in describing the state of a repository should be made:
 
 :::{card} Best practices (4/4)
-- Tag particular states
-- Use a meaningful versioning framework to describe states (e.g. [semver](https://semver.org/))
+- Tag particular states (see [**git tag**&nbsp;{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-tag))
+- Use a meaningful versioning framework to describe states (e.g. [semver&nbsp;{octicon}`link-external;0.8em`](https://semver.org/))
 :::
