@@ -26,6 +26,4 @@ DevOps/overview
 DevOps/exploration
 DevOps/access
 DevOps/proj_mgmt
-DevOps/release
-DevOps/automation
 ```
