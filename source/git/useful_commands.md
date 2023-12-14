@@ -31,3 +31,6 @@ This command allow you to "put un-staged changes away" such that you can perform
 `git stash pop` will reapply the changes you had put away.
 ```
 ::::
+::::{dropdown} git cherry-pick &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-cherry-pick)
+`git cherry-pick <commit>` will apply the changes introduced in `<commit>` to the current branch.
+::::
