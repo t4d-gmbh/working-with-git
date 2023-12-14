@@ -22,11 +22,8 @@ git/collab_reading
 :maxdepth: 2
 :caption: DevOps Software
 
-git/about
-```
-```{toctree}
-:maxdepth: 2
-:caption: Automation
-
-git/about
+DevOps/overview
+DevOps/exploration
+DevOps/access
+DevOps/proj_mgmt
 ```
