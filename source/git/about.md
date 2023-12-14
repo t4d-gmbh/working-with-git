@@ -8,13 +8,13 @@ A data structure containing a set of files along with some metadata.
 [Git](https://git-scm.com) is a **distributed version control system**.
 That is a software providing various functionalities to **track**, **propagate**, and **manage** changes in a _repository_.
 
-Git is open source and supported on all mayor operating systems.
+Git is open source and supported on all major operating systems.
 
 ## Main Features
 
 ```{dropdown} Tracking changes
 
-As a version control system it provides easily-accessible functionalities to:
+As a version control system it provides easily accessible functionalities to:
 
 - generate a history of changes in a repository
 - verify the integrity of the history[^sn1]
@@ -64,8 +64,8 @@ However, it does not track the functinality of whatever the content implements.
 
 There is **no** guarantee that:
 
-- Git will identify breaking changes as a conflicts[^sn3]
-- Two functioning versions do not lead to a disfunctional combination
+- Git will identify breaking changes as a conflict[^sn3]
+- Two functioning versions do not lead to a dysfunctional combination
 
 
 ```

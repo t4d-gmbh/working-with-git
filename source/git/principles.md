@@ -1,6 +1,6 @@
 # Collaboration Principles
 
-Even though with `git` you can track document strictly all changes in a repository, simply using `git` does you not make a good collaborator.
+Even though with `git` you can track document strictly all changes in a repository, simply using `git` does not make you a good collaborator.
 
 In other words:
 
@@ -16,7 +16,7 @@ Instead of contributing to this discussion we will point out a few principles th
 
 In the `git`-context this translates to:
 
-**You need to know a specific commit on a specific branch that represent a healthy state**
+**You need to know a specific commit on a specific branch that represents a healthy state**
 
 More precisely this state should:
 
@@ -31,7 +31,7 @@ A successful collaboration and development strategy should cultivate healthy sta
 - Never develop directly on the main reference
 - Never modify shared history
 - Try to consolidate branches whenever possible
-- Verify the functionality of the resulting state **before** you incorporate a branches into the main reference 
+- Verify the functionality of the resulting state **before** you incorporate a branch into the main reference 
 :::
 
 [^sn1]: While **`git` is a distributed** version control system, **it is not decentralized**: Each repository usually has one upstream location (e.g. **origin**) which acts as reference location for the reference branch.
@@ -55,7 +55,7 @@ Following the history of a repository becomes easier if the single branches inco
 
 :::{card} Best practices (2/4)
 - Agglomerate commit with a similar subject or purpose in a common branch
-- Incorporate branches with with completed purpose
+- Incorporate branches with completed purpose
 :::
 
 ## Meaningful steps
