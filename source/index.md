@@ -15,7 +15,8 @@ git/useful_commands
 :maxdepth: 2
 :caption: Collaboration with Git
 
-git/branches
+git/principles
+git/collab_reading
 ```
 ```{toctree}
 :maxdepth: 2
