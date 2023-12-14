@@ -3,12 +3,12 @@
 `git` is a version control system and does not provide tools specific to project management and hence, this was one of the main extra features provided by services like GitHub or GitLab.
 
 ## Basic Elements
-The approach followed by virtually any such service that is know to us is based on a few basic elements:
+The approach followed by virtually any such service that is known to us is based on a few basic elements:
 
 :::{card} Issues
 Is a rather genuine piece of information tied to a repository.
 
-It is consisting of a title, a description and several options arguments, like a assignee, labels, a due date, etc.
+It consists of a title, a description and several optional arguments, like an assignee, labels, a due date, etc.
 
 The term _issue_ should not be taken to literally, in this context and idea, a proposition or a question are all _issues_.
 :::
