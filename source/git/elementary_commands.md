@@ -58,11 +58,11 @@ operation is only where it becomes apparent that you local branch was not update
 :class-title: pull
 Assuming this is the state in which you run a `git pull`:
 ```
-	  C---D---E master on origin
-	 /
-    A---B---C'---D' master
-	^
-	origin/master in your repository
+      C---D---E master on origin
+     /
+A---B---C'---D' master
+    ^
+    origin/master in your repository
 ```
 What will happen:
 
