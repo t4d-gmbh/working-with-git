@@ -6,6 +6,7 @@
 :caption: Git Workflow
 
 git/about
+git/basic_elements
 git/workflow
 git/elementary_commands
 git/update_cycle

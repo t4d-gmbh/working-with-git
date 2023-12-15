@@ -41,6 +41,7 @@ It can:
 - maintain multiple versions concurrently
 - exchange atomic changes between different versions
 
+
 ```
 
 ## Inabilities
@@ -66,10 +67,8 @@ There is **no** guarantee that:
 
 - Git will identify breaking changes as a conflict[^sn3]
 - Two functioning versions do not lead to a dysfunctional combination
-
-
 ```
 
-[^sn1]: A state is identified by a hash of the content and each state contains the hash of its preceding state leading to a unique identifier of the entire history.
+[^sn1]: A state is identified by a hash of the content and each state contains the hash of its preceding state(s), also called _parent(s)_, leading to a unique identifier of the entire history.
 [^sn2]: This is what makes it a _distributed_, and thus more resilient, version control system.
 [^sn3]: This is rather obvious, if you think about it. But is something that might not be thought about if Git is not reporting any conflicts when merging changes from different sources.
