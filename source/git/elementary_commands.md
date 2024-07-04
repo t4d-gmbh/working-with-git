@@ -26,28 +26,28 @@ Running `git fetch` is always a save operation
 ![merge view](figures/merge_view.svg)
 Starting from the following setup:
 ```text
-       C'-----D' master
+       C'-----D' main
       /
- A---B---C---D---E origin/master
+ A---B---C---D---E origin/main
  ```
 A `git merge` will perform:
 
-1. Create a new commit on top of the current branch that contains all the changes from the commits from **origin/master**
+1. Create a new commit on top of the current branch that contains all the changes from the commits from **origin/main** [^sn1]
    ```text
-                 master 
+                 main 
                  ∨
           C'-----D'---F
          /           /
-    A---B---C---D---E origin/master
+    A---B---C---D---E origin/main
    ```
 1. Set the head of your local branch to this new commit
    ```text
-          C'-----D'---F master
+          C'-----D'---F main
          /           /
-    A---B---C---D---E origin/master
+    A---B---C---D---E origin/main
     ```
 ```{note}
-If your current branch is **master**, a `git merge` will be equivalent to `git merge origin/master`.
+If your current branch is **main**, a `git merge` will be equivalent to `git merge origin/main`.
 ```
 :::
 
@@ -56,23 +56,25 @@ If your current branch is **master**, a `git merge` will be equivalent to `git m
 
 Starting from the following setup:
 ```text
-       C'-----D' master
+       C'-----D' main
       /
- A---B---C---D---E origin/master
+ A---B---C---D---E origin/main
  ```
 A `git rebase` will perform:
 
 1. Apply each commit from your local branch onto the remote branch:
    ```text
-                     C''---D'' master
+                     C''---D'' main
                     /         
-   A---B---C---D---E origin/master
+   A---B---C---D---E origin/main
    ```
 
 ```{note}
 - You might have to resovle conflicts for each commit from the local branch (i.e. `C'` and `D'`).
 - With `git rebase -i` you can also rewrite the history of a single branch, see the [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) article on the official website.
 ```
+
+[^sn1]: Historically, the default branch name in Git is `master` but has been changed to `main` due to its more inclusive nature [source](https://sfconservancy.org/news/2020/jun/23/gitbranchname/).
 :::
 
 :::{tab} <strong style="color:gray">add &nbsp;[{octicon}`link-external;0.8em;add`](https://git-scm.com/docs/git-add)</strong>
@@ -117,31 +119,31 @@ operation is only where it becomes apparent that you local branch was not update
 :class-title: pull
 Assuming this is the state in which you run a `git pull`:
 ```text
-      C---D---E master on origin
+      C---D---E main on origin
      /
-A---B---C'---D' master
+A---B---C'---D' main
     ^
-    origin/master in your repository
+    origin/main in your repository
 ```
 What will happen:
 
-1. `git fetch` will update **origin/master**
+1. `git fetch` will update **origin/main**
    ```text
-                   origin/master in your repository
+                   origin/main in your repository
                    ∨
-          C---D----E master on origin
+          C---D----E main on origin
          /
-    A---B---C'---D' master
+    A---B---C'---D' main
    ```
-2. `git merge origin/master` will
+2. `git merge origin/main` will
   
-   - replay the commit from the remote branch (`C`, `D` and `E`) at the end of your local **master**, i.e. on top of `D'`
-   - register the result in a new commit `F` on top of your local branch, i.e. **master** in this case
+   - replay the commit from the remote branch (`C`, `D` and `E`) at the end of your local **main**, i.e. on top of `D'`
+   - register the result in a new commit `F` on top of your local branch, i.e. **main** in this case
    ```text
-                   origin/master in your repository
+                   origin/main in your repository
                    ∨
-          C---D----E master on origin
+          C---D----E main on origin
          /          \
-    A---B---C'---D'--F master
+    A---B---C'---D'--F main
    ```
 ::::
