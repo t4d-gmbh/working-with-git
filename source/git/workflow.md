@@ -43,7 +43,7 @@ Downloads the last status of a repository from the remote.
 _followed by_
 ::::{card} git merge&nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-fetch) _or_ git rebase &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-rebase) 
 
-Incorporate changes from anther branch into the current branch.
+Incorporate changes from another branch into the current branch.
 :::{dropdown} {octicon}`info`&nbsp;Decide which option to use
 :color: info
 
