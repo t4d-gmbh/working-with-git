@@ -54,14 +54,14 @@ Synchronization is not coupled to change events in the repository.
 Therefore:
 - collaboration mediated by Git happens asynchronously
 - simultaneous editing is not supported
-- synchronizing the state of a repository is part the workflow with Git
+- synchronizing the state of a repository is part of the Git workflow
 
 ```
 
 ```{dropdown} Guarantee functional consistency
 
 Git tracks only the content of files.
-However, it does not track the functinality of whatever the content implements.
+However, it does not track the functionality of whatever the content implements.
 
 There is **no** guarantee that:
 
