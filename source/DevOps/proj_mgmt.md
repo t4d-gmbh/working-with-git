@@ -28,7 +28,7 @@ It defines a suggestion (or request) to incorporate one branch into the other.
 
 ## Workflows
 
-While above elements can all exist independently, there is a intuitive order to their life cycle:
+While above elements can all exist independently, there is an intuitive order to their life cycle:
 
 1. One would typically start with defining a Milestone to set a general goal or direction
 2. Smaller more actionable steps to move in this direction can then be defined in several Issues
