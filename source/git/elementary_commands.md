@@ -71,7 +71,7 @@ A `git rebase` will perform:
 
 ```{note}
 - You might have to resovle conflicts for each commit from the local branch (i.e. `C'` and `D'`).
-- With `git rebase -i` you can also rewrite the history of a single branch, see the [Rewrtiting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) article on the official website.
+- With `git rebase -i` you can also rewrite the history of a single branch, see the [Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History) article on the official website.
 ```
 :::
 
