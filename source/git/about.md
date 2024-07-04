@@ -69,6 +69,16 @@ There is **no** guarantee that:
 - Two functioning versions do not lead to a dysfunctional combination
 ```
 
+```{dropdown} Tracking changes in binary files
+
+Git is not well suited to track changes in binary files.
+
+Binary files are stored as a whole, which can lead to large repositories with slow operations and conflicts that are hard to resolve.
+
+Git LFS (Large File Storage) is a solution to this problem. It allows to store binary files outside of the repository and only track their location and version.
+
+```
+
 [^sn1]: A state is identified by a hash of the content and each state contains the hash of its preceding state(s), also called _parent(s)_, leading to a unique identifier of the entire history.
 [^sn2]: This is what makes it a _distributed_, and thus more resilient, version control system.
 [^sn3]: This is rather obvious, if you think about it. But is something that might not be thought about if Git is not reporting any conflicts when merging changes from different sources.
