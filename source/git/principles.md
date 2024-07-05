@@ -1,6 +1,6 @@
 # Collaboration Principles
 
-Even though with `git` you can track document strictly all changes in a repository, simply using `git` does not make you a good collaborator.
+Even though with `git` you can track and document strictly all changes in a repository, simply using `git` does not make you a good collaborator.
 
 In other words:
 
@@ -54,7 +54,7 @@ It is up to the developer to associate branches with specific subjects or tasks 
 Following the history of a repository becomes easier if the single branches incorporate some subject specificity, leading to a further set of best practices:
 
 :::{card} Best practices (2/4)
-- Agglomerate commit with a similar subject or purpose in a common branch
+- Agglomerate commits with a similar subject or purpose in a common branch
 - Incorporate branches with completed purpose
 :::
 

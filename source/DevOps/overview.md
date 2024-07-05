@@ -2,10 +2,10 @@
 
 What we have called **origin** for now, and simply referred to as the _remote location or device_ can refer to anything from as single-board computer to a massive cloud service.
 
-In fact, with the popularity of `git` the service of offering a repositorie's **origin** has become an economically relevant business with service providers extending considerably the list of the provided features beyond the already rich functionalities `git` the version control system includes.
+In fact, with the popularity of `git` the service of offering a repositories' **origin** has become an economically relevant business with service providers extending considerably the list of the provided features beyond the already rich functionalities `git`, the version control system, includes.
 
 
-To give an idea about the kind of service provides we talk about, here is a non-extensive list:
+To give an idea about the kind of service providers we're talking about, here is a non-extensive list:
 
 - GitHub &nbsp;[{octicon}`link-external;0.8em`](https://github.com)
 - GitLab &nbsp;[{octicon}`link-external;0.8em`](https://gitlab.com)

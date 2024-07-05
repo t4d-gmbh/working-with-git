@@ -54,19 +54,29 @@ Synchronization is not coupled to change events in the repository.
 Therefore:
 - collaboration mediated by Git happens asynchronously
 - simultaneous editing is not supported
-- synchronizing the state of a repository is part the workflow with Git
+- synchronizing the state of a repository is part of the Git workflow
 
 ```
 
 ```{dropdown} Guarantee functional consistency
 
 Git tracks only the content of files.
-However, it does not track the functinality of whatever the content implements.
+However, it does not track the functionality of whatever the content implements.
 
 There is **no** guarantee that:
 
 - Git will identify breaking changes as a conflict[^sn3]
 - Two functioning versions do not lead to a dysfunctional combination
+```
+
+```{dropdown} Tracking changes in binary files
+
+Git is not well suited to track changes in binary files.
+
+Binary files are stored as a whole, which can lead to large repositories with slow operations and conflicts that are hard to resolve.
+
+Git LFS (Large File Storage) is a solution to this problem. It allows to store binary files outside of the repository and only track their location and version.
+
 ```
 
 [^sn1]: A state is identified by a hash of the content and each state contains the hash of its preceding state(s), also called _parent(s)_, leading to a unique identifier of the entire history.

@@ -1,6 +1,6 @@
 # Getting started
 
-All you need to know to perform a basic update cycle with git are 4 commands[^sn1]:
+All you need to know to perform a basic update cycle with git are 4+1 commands[^sn1]:
 
 :::::{grid} 1 4 4 4
 ::::{grid-item}
@@ -13,6 +13,12 @@ Clone a repository into a new directory.
 :::{dropdown} pull &nbsp;[{octicon}`link-external;0.8em;pull`](https://git-scm.com/docs/git-pull)
 :class-title: pull
 Get changes from a remote repository.
+:::
+::::
+::::{grid-item}
+:::{dropdown} add &nbsp;[{octicon}`link-external;0.8em;add`](https://git-scm.com/docs/git-add)
+:class-title: add
+Add file contents to the index (staging area) to collect changes for the next commit [^sn2].
 :::
 ::::
 ::::{grid-item}
@@ -29,6 +35,7 @@ Push the changes back to the remote repository.
 ::::
 :::::
 [^sn1]: All you _need_ is not necessarily all you _should_ use!
+[^sn2]: Adding is not mandatory, but it is a good practice to keep track of changes. It can be done in a single step with `git commit -a`.
 
 ## A simplistic view
 ![simple view](figures/simple_view.svg)
@@ -43,7 +50,7 @@ Downloads the last status of a repository from the remote.
 _followed by_
 ::::{card} git merge&nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-fetch) _or_ git rebase &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-rebase) 
 
-Incorporate changes from anther branch into the current branch.
+Incorporate changes from another branch into the current branch.
 :::{dropdown} {octicon}`info`&nbsp;Decide which option to use
 :color: info
 
