@@ -40,13 +40,18 @@ html_theme_options = {
     "toc_title": "Content",
     "use_sidenotes": True,
     "logo": {
-        "image_light": "_static/Badge_v4_bw.svg",
-        "image_dark": "_static/Badge_v4_wb.svg",
+        "image_light": "_static/T4D_logo_bw.svg",
+        "image_dark": "_static/T4D_logo_wb.svg",
+        "link": "https://t4d.ch",
         },
+    "show_toc_level": 2,  # Show the table of contents up to level 2
+    "navigation_with_keys": True,  # Enable keyboard navigation
+    "collapse_navigation": False,  # Do not collapse the navigation
+    # "sidebar_width": "250px",  # Set the width of the sidebar
 }
 
 favicons = [
-    "Badge_v4_bw.svg"
+    "_static/T4D_logo_bw.svg"
 ]
 
 myst_enable_extensions = [
