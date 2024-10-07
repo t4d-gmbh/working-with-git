@@ -5,26 +5,26 @@
 :maxdepth: 2
 :caption: Git Workflow
 
-git/about
-git/basic_elements
-git/workflow
-git/elementary_commands
-git/update_cycle
-git/useful_commands
+content/git/about
+content/git/basic_elements
+content/git/workflow
+content/git/elementary_commands
+content/git/update_cycle
+content/git/useful_commands
 ```
 ```{toctree}
 :maxdepth: 2
 :caption: Collaboration with Git
 
-git/principles
-git/collab_reading
+content/git/principles
+content/git/collab_reading
 ```
 ```{toctree}
 :maxdepth: 2
 :caption: DevOps Software
 
-DevOps/overview
-DevOps/exploration
-DevOps/access
-DevOps/proj_mgmt
+content/DevOps/overview
+content/DevOps/exploration
+content/DevOps/access
+content/DevOps/proj_mgmt
 ```
