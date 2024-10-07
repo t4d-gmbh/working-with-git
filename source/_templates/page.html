@@ -1,0 +1,14 @@
+{% extends "!layout.html" %}
+
+{% block body %}
+
+{% if build == "slides" %}
+<div style="display: flex; justify-content: flex-start; align-items: center; height: 80vh;">
+  <div  style="margin-left: 1vw; margin-right:0.5vw;">
+    {{ body }}
+  </div>
+</div>
+{% else %}
+    {{ body }}
+{% endif %}
+{% endblock %}
