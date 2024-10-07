@@ -1,6 +1,14 @@
 # Getting started
 
 All you need to know to perform a basic update cycle with git are 4+1 commands[^sn1]:
+[^sn1]: All you _need_ is not necessarily all you _should_ use!
+
+```{Note}
+:class: margin
+Using `git add` is not strictly mandatory, but it is a good practice to keep track of changes.
+`git commit -a` directly adds and commits all changed files.
+
+```
 
 :::::{grid} 1 4 4 4
 ::::{grid-item}
@@ -18,7 +26,7 @@ Get changes from a remote repository.
 ::::{grid-item}
 :::{dropdown} add &nbsp;[{octicon}`link-external;0.8em;add`](https://git-scm.com/docs/git-add)
 :class-title: add
-Add file contents to the index (staging area) to collect changes for the next commit [^sn2].
+Add file contents to the index (staging area) to collect changes for the next commit.
 :::
 ::::
 ::::{grid-item}
@@ -34,8 +42,6 @@ Push the changes back to the remote repository.
 :::
 ::::
 :::::
-[^sn1]: All you _need_ is not necessarily all you _should_ use!
-[^sn2]: Adding is not mandatory, but it is a good practice to keep track of changes. It can be done in a single step with `git commit -a`.
 
 ## A simplistic view
 ![simple view](figures/simple_view.svg)
