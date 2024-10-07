@@ -4,7 +4,7 @@
 
 ./about/index
 ./elements/index
-./workflow
+./workflow/index
 ./elementary_commands
 ./update_cycle
 ./useful_commands
