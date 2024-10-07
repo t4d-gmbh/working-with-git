@@ -33,6 +33,10 @@ html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
 html_css_files = ['custom.css',]
 
+html_context = {
+    "default_mode": "light",
+}
+
 html_theme_options = {
     "repository_url": "https://github.com/t4d-gmbh/working-with-git",
     "repository_branch": "main",
