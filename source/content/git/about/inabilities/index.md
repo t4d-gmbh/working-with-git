@@ -1,8 +1,8 @@
-## Inabilities
+## Limitations
 
 ```{toctree}
 :maxdepth: 2
-:caption:
+:hidden:
 
 ./sync
 ./consistency

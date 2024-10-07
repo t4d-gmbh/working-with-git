@@ -3,7 +3,7 @@
 :maxdepth: 2
 
 ./about/index
-./basic_elements
+./elements/index
 ./workflow
 ./elementary_commands
 ./update_cycle

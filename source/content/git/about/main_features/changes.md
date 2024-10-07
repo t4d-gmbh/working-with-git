@@ -6,4 +6,4 @@ It can:
 - consolidate changes from different sources
 - identify conflicting changes and allow to transparently resolve them
 - maintain multiple versions concurrently
-- exchange atomic changes between different versions
+- exchange incremental changes between different versions

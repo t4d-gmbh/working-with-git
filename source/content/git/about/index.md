@@ -11,7 +11,7 @@
 ./inabilities/index
 ```
 {% else %}
-<!-- BUILDING THE pages -->
+<!-- BUILDING THE PAGES -->
 ```{include} ./what_is_git.md
 ```
 ## Main Features
@@ -21,7 +21,7 @@
 ```
 ```{include} ./main_features/changes.md
 ```
-## Inabilities
+## Limitations
 ```{include} ./inabilities/sync.md
 ```
 ```{include} ./inabilities/consistency.md
