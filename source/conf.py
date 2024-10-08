@@ -37,6 +37,24 @@ html_context = {
     "default_mode": "light",
 }
 
+discuss_icon = {
+            "name": "GitHub Discussion",
+            "url": "https://github.com/t4d-gmbh/working-with-git/discussions",
+            "icon": "fa-regular fa-comments",
+            "type": "fontawesome",
+        }
+pages_icon = {
+            "name": "Pages",
+            "url": "https://t4d-gmbh.github.io/working-with-git/index.html",
+            "icon": "fa-solid fa-book",
+            "type": "fontawesome",
+        }
+slides_icon = {
+            "name": "Slides",
+            "url": "https://t4d-gmbh.github.io/working-with-git/slides/index.html",
+            "icon": "fa-solid fa-person-chalkboard",
+            "type": "fontawesome",
+        }
 html_theme_options = {
     "repository_url": "https://github.com/t4d-gmbh/working-with-git",
     "repository_branch": "main",
@@ -55,26 +73,7 @@ html_theme_options = {
     "navigation_with_keys": True,  # Enable keyboard navigation
     "collapse_navigation": False,  # Do not collapse the navigation
     # "sidebar_width": "250px",  # Set the width of the sidebar
-    "icon_links": [
-        {
-            "name": "GitHub Discussion",
-            "url": "https://github.com/t4d-gmbh/working-with-git/discussions",
-            "icon": "fa-regular fa-comments",
-            "type": "fontawesome",
-        },
-        {
-            "name": "Pages",
-            "url": "https://t4d-gmbh.github.io/working-with-git/index.html",
-            "icon": "fa-solid fa-book",
-            "type": "fontawesome",
-        },
-        {
-            "name": "Slides",
-            "url": "https://t4d-gmbh.github.io/working-with-git/slides/index.html",
-            "icon": "fa-solid fa-person-chalkboard",
-            "type": "fontawesome",
-        },
-    ],
+    "icon_links": [discuss_icon, slides_icon],
 }
 
 favicons = [
@@ -101,4 +100,20 @@ def rstjinja(app, docname, source):
         source[0] = rendered
 
 def setup(app):
+    builds = app.config.html_context.get('build', 'pages')
+    if builds == 'slides':
+        # ###
+        # we do some config adaptations for the slides
+        # ###
+        # simpler sidebar
+        app.config.html_sidebars = {
+            "**": [
+                # "navbar-logo.html",
+                "icon-links.html",
+                # "search-button-field.html",
+                "sbt-sidebar-nav.html"
+                ]
+        }
+        # only show discuss and pages icons in sidebar
+        app.config.html_theme_options['icon_links'] = [discuss_icon, pages_icon]
     app.connect("source-read", rstjinja)

@@ -6,6 +6,7 @@ From a users perspective working with Git consists of operations around three ba
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
 :maxdepth: 2
+:numbered:
 :caption: Elements
 
 ./commits
