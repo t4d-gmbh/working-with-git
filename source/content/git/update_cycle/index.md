@@ -6,7 +6,6 @@ Git does not automatically synchronize between devices, it is up to the develope
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
 :maxdepth: 2
-:numbered:
 
 ./0_1
 ./0_2

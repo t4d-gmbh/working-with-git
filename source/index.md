@@ -2,18 +2,12 @@
 ```
 
 ```{toctree}
-:maxdepth: 2
-:numbered:
+:maxdepth: {% if build == "slides" %}1{% else %}2{% endif %}
+{% if build == "slides" %}:numbered:{% endif %}
 
 :caption: Working with Git
 
 content/git/index
 
-content/git/principles
-content/git/collab_reading
-
-content/DevOps/overview
-content/DevOps/exploration
-content/DevOps/access
-content/DevOps/proj_mgmt
+content/DevOps/index
 ```
