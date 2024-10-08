@@ -5,7 +5,9 @@
 ./about/index
 ./elements/index
 ./workflow/index
-./elementary_commands
+./commands/index
+
+
 ./update_cycle
 ./useful_commands
 ```

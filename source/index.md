@@ -3,6 +3,8 @@
 
 ```{toctree}
 :maxdepth: 2
+:numbered:
+
 :caption: Working with Git
 
 content/git/index
