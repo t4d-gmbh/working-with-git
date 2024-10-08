@@ -6,6 +6,7 @@
 ./elements/index
 ./workflow/index
 ./commands/index
+./update_cycle/index
 
 
 ./update_cycle
