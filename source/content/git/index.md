@@ -7,8 +7,5 @@
 ./workflow/index
 ./commands/index
 ./update_cycle/index
-
-
-./update_cycle
-./useful_commands
+./useful_commands/index
 ```
