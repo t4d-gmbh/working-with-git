@@ -120,5 +120,7 @@ def setup(app):
         }
         # only show discuss and pages icons in sidebar
         app.config.html_theme_options['icon_links'] = [discuss_icon, pages_icon]
+        # adding the new styling
+        app.config.html_css_files.append('slides.css')
     app.connect("source-read", rstjinja)
     app.connect("include-read", include_rstjinja)
