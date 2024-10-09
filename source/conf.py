@@ -91,6 +91,7 @@ def rstjinja(app, docname, source):
     """
     Render source file with jinja first
     """
+    print(f"{docname=}")
     # only apply to 'html' builder
     if app.builder.format == 'html':
         src = source[0]
@@ -98,6 +99,9 @@ def rstjinja(app, docname, source):
             src, app.config.html_context
         )
         source[0] = rendered
+
+def include_rstjinja(app, docname, parent_docname, source):
+    return rstjinja(app=app, docname=docname, source=source)
 
 def setup(app):
     builds = app.config.html_context.get('build', 'pages')
@@ -117,3 +121,4 @@ def setup(app):
         # only show discuss and pages icons in sidebar
         app.config.html_theme_options['icon_links'] = [discuss_icon, pages_icon]
     app.connect("source-read", rstjinja)
+    app.connect("include-read", include_rstjinja)
