@@ -33,12 +33,8 @@ Instead of contributing to this discussion we will point out a few principles th
 
 ```{include} ./healthy_reference.md
 ```
-:::{admonition} Best Practice (1/4)
-:class: tip
 ```{include} ./healthy_reference_best.md
-:start-after: <!-- pages-include -->
 ```
-:::
 ```{include} ./separate.md
 ```
 :::{admonition} Best Practice (2/4)
