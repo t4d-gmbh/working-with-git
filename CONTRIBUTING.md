@@ -102,6 +102,13 @@ context variable.
 
 Within each included or imported `.md` file you can also specify what content you want
 to show in the slides and what should be shown in the page view.
+You can use:
+
+- `{% if builds == 'pages' %}...{% endif %}` or `{% if page %}...{% endif %}` to include
+  content only in the static page
+- `{% if builds == 'slides' %}...{% endif %}` or `{% if slide %}...{% endif %}` to include
+  content only in the slide
+
 The above `slide1.md` could look as follows:
 
     {% if build == "slides" %}
@@ -111,11 +118,11 @@ The above `slide1.md` could look as follows:
     {% endif %}
 
     **This text is both on the slide and in the pages
-    {% if build == "pages" %}
+    {% if slide %}
     🤪 This in only on the slide 🤪
     {% endif %}
 
-    {% if build == "pages" %}
+    {% if page %}
     This text is only in the pages view and not on the slide
     {% endif %}
 

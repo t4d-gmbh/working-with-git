@@ -105,7 +105,12 @@ def include_rstjinja(app, docname, parent_docname, source):
 
 def setup(app):
     builds = app.config.html_context.get('build', 'pages')
+    # setting `slide` and `page` context
+    app.config.html_context['page'] = True
+    app.config.html_context['slide'] = False
     if builds == 'slides':
+        app.config.html_context['slide'] = True
+        app.config.html_context['page'] = False
         # ###
         # we do some config adaptations for the slides
         # ###
