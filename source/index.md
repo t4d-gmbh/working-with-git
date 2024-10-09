@@ -1,4 +1,5 @@
 ```{include} ../README.md
+:end-before: <!-- include-upper -->
 ```
 
 ```{toctree}
