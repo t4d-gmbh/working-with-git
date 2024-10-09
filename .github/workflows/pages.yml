@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main", 'auto-deploy']
+    branches: ["main", '17-introduce-slides-ready-layout']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,9 +36,12 @@ jobs:
           python-version: '3.11'
           cache: 'pip' # caching pip dependencies
       - run: pip install -r requirements.txt
-      - name: Prepare sphinx build
+      - name: Spinx build pages
         run: |
-            make html
+            sphinx-build -b html source docs/html -E -A build="pages"
+      - name: Spinx build slides
+        run: |
+            sphinx-build -b html source docs/html/slides -E -A build="slides"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

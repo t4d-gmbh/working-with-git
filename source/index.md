@@ -1,30 +1,14 @@
 ```{include} ../README.md
+:end-before: <!-- include-upper -->
 ```
 
 ```{toctree}
-:maxdepth: 2
-:caption: Git Workflow
+:maxdepth: {% if build == "slides" %}1{% else %}2{% endif %}
+{% if build == "slides" %}:numbered:{% endif %}
 
-git/about
-git/basic_elements
-git/workflow
-git/elementary_commands
-git/update_cycle
-git/useful_commands
-```
-```{toctree}
-:maxdepth: 2
-:caption: Collaboration with Git
+:caption: Working with Git
 
-git/principles
-git/collab_reading
-```
-```{toctree}
-:maxdepth: 2
-:caption: DevOps Software
+content/git/index
 
-DevOps/overview
-DevOps/exploration
-DevOps/access
-DevOps/proj_mgmt
+content/DevOps/index
 ```
