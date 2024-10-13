@@ -83,6 +83,9 @@ favicons = [
 myst_enable_extensions = [
     "colon_fence",
 ]
+suppress_warnings = [
+    "myst.header", # suppress warnings of the kind "WARNING: Non-consecutive header level increase; H1 to H3"
+]
 
 # ###
 # Custom jinja parser to enable jinja templating
