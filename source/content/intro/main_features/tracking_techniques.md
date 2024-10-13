@@ -1,18 +1,5 @@
-### Tracking changes
-
-{% if slide%}
-```{admonition} <i class="fab fa-git"></i> tracking features
-:class: tip, margin
-{% else %}
-As a version control system <i class="fab fa-git"></i> provides easily accessible functionalities to:
-{% endif %}
-- generate a history of changes in a repository
-- verify the integrity of the history{% if slide%}
-
-```{% else %}[^sn1]
-[^sn1]: A state is identified by a hash of the content and each state contains the hash of its preceding state(s), also called _parent(s)_, leading to a unique identifier of the entire history.
-
-<i class="fab fa-git"></i> uses the following techniques to acheive this:
+{% if slide %}
+### Tracking techniques
 {% endif %}
 
 {% if page %}::::{tabs}{% endif %}

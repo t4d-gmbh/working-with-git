@@ -1,10 +1,11 @@
 ```{include} ../README.md
-:end-before: <!-- include-upper -->
+:end-before: <!-- include-before -->
 ```
 ```{toctree}
-:maxdepth: 2
-{% if build == "slides" %}:numbered:{% endif %}
+:maxdepth: {% if build == "slides" %}1{% else %}4{% endif %}
 :caption: Working with Git
+{% if build == "slides" %}:numbered:{% endif %}
 
-content/index
+
+content/intro/index
 ```
