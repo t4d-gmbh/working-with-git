@@ -46,6 +46,9 @@ Another feature of <i class="fab fa-git"></i> is its capability to act cross rep
 ```{include} ./main_features/managing_changes_features.md
 ```
 ## Limitations
+
+<i class="fab fa-git"></i>'s design paradigm imposes certain constraints that are worth having a closer look at.
+
 ```{include} ./limitations/sync.md
 ```
 ```{include} ./limitations/consistency.md

@@ -1,7 +1,17 @@
-### Tracking changes in binary files
+### Variety of trackable files
 
-Git is not well suited to track changes in binary files.
+```{admonition} Not all filetypes and sizes are well supported
+:class: warning
+<i class="fab fa-git"></i> tracks changes line-by-line which can be problematic.
+```
 
-Binary files are stored as a whole, which can lead to large repositories with slow operations and conflicts that are hard to resolve.
+This leads to limited support for:
 
-Git LFS (Large File Storage) is a solution to this problem. It allows to store binary files outside of the repository and only track their location and version.
+- Binary files
+- Filetypes that include metadata (e.g. `.docx`)
+- Large files (<i class="fab fa-git"></i>'s size limit for a single file is 2 GB){% if page %}[^sn4]{% endif %}
+
+
+{% if page %}
+[^sn4]: Git LFS (Large File Storage) is a solution to this problem. It allows to store binary files outside of the repository and only track their location and version.
+{% endif %}
