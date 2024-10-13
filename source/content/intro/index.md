@@ -1,14 +1,13 @@
-# About Git
+# <i class="fab fa-git"></i> - A brief introduction
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
-:maxdepth: 2
-:caption: Contents
+:maxdepth: 1
 
 ./what_is_git
 ./main_features/index
-./inabilities/index
+./limitations/index
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
@@ -22,13 +21,10 @@
 ```{include} ./main_features/changes.md
 ```
 ## Limitations
-```{include} ./inabilities/sync.md
+```{include} ./limitations/sync.md
 ```
-```{include} ./inabilities/consistency.md
+```{include} ./limitations/consistency.md
 ```
-```{include} ./inabilities/tracking.md
+```{include} ./limitations/tracking.md
 ```
 {% endif %}
-
-
-
