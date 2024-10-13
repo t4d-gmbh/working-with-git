@@ -1,4 +1,4 @@
-### <strong style="color:orange">rebase</strong>
+### <i class="fab fa-git"></i> <strong style="color:orange">rebase</strong>
 
 <!-- pages-include -->
 :::{margin}

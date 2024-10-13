@@ -1,4 +1,4 @@
-### <strong style="color:red">pull</strong>
+### <i class="fab fa-git"></i> <strong style="color:red">pull</strong>
 
 <!-- pages-include -->
 

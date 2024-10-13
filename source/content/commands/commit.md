@@ -1,4 +1,4 @@
-### <strong style="color:blue">commit</strong>
+### <i class="fab fa-git"></i> <strong style="color:blue">commit</strong>
 
 <!-- pages-include -->
 :::{margin}

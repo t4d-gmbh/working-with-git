@@ -1,4 +1,4 @@
-### <strong style="color:lightgreen">merge</strong>
+### <i class="fab fa-git"></i> <strong style="color:lightgreen">merge</strong>
 
 <!-- pages-include -->
 :::{margin}

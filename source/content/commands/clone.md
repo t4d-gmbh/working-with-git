@@ -1,4 +1,4 @@
-### <strong style="color:#ca80e9">clone</strong>
+### <i class="fab fa-git"></i> <strong style="color:#ca80e9">clone</strong>
 
 <!-- pages-include -->
 :::{margin}

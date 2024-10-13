@@ -1,4 +1,4 @@
-# Elementary commands 
+# <i class="fab fa-git"></i> - Elementary commands
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
@@ -41,7 +41,6 @@
 
 :::{tab} <strong style="color:gray">add &nbsp;[{octicon}`link-external;0.8em;add`](https://git-scm.com/docs/git-add)</strong>
 ```{include} ./add.md
-:start-after: <!-- pages-include -->
 ```
 :::
 :::{tab} <strong style="color:blue">commit &nbsp;[{octicon}`link-external;0.8em;commit`](https://git-scm.com/docs/git-commit)</strong>

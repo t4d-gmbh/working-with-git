@@ -4,4 +4,6 @@
 
 intro/index
 elements/index
+commands/index
+
 ```

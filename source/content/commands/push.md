@@ -1,4 +1,4 @@
-### <strong style="color:darkviolet">push</strong>
+### <i class="fab fa-git"></i> <strong style="color:darkviolet">push</strong>
 
 <!-- pages-include -->
 :::{margin}

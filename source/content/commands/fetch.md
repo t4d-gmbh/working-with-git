@@ -1,4 +1,4 @@
-### <strong style="color:green">fetch</strong>
+### <i class="fab fa-git"></i> <strong style="color:green">fetch</strong>
 
 <!-- pages-include -->
 

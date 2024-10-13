@@ -14,6 +14,7 @@ From a users perspective working with <i class="fab fa-git"></i> consists of int
 ./HEAD
 ./index_stage
 ./working_dir
+./history
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
@@ -28,5 +29,7 @@ From a users perspective working with <i class="fab fa-git"></i> consists of int
 ```{include} ./index_stage.md
 ```
 ```{include} ./working_dir.md
+```
+```{include} ./history.md
 ```
 {% endif %}
