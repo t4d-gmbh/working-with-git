@@ -1,9 +1,13 @@
-### Managing changes
+{% if slide %}
+### Change management features
+{% endif %}
 
-Git comes with a rich tool-set to curate and manipulate a repository's history.
-It can:
+:::{card} <i class="fab fa-git"></i> can control the application of changes:
 
 - consolidate changes from different sources
 - identify conflicting changes and allow to transparently resolve them
 - maintain multiple versions concurrently
 - exchange incremental changes between different versions
+
+:::
+

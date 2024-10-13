@@ -1,5 +1,5 @@
 {% if slide %}
-### Propagation content
+### Content Distribution
 {% endif %}
 
 What can be shared in <i class="fab fa-git"></i>?
@@ -31,9 +31,8 @@ Binary files that contain the compressed and delta-encoded data for a set of com
 :::
 ::::{grid}
 
-```{admonition} **Not shared** are:
+```{admonition}&nbsp;**Not shared** are:
 :class: warning
-
 ::::{grid}
 :::{grid-item-card} Working Directory
 Local files that have not been added for tracking
@@ -45,5 +44,5 @@ A collection changed files that should be added to the next commit
 {% if page %}
 {% endif %}
 :::
-::::{grid}
+::::
 ```

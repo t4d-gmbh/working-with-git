@@ -1,5 +1,5 @@
 {% if slide %}
-### Propagation techniques
+### Distribution techniques
 {% else %}
 <i class="fab fa-git"></i> supports several protocols to send and receive content:
 {% endif %}
