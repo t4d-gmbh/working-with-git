@@ -1,7 +1,11 @@
+{% if slide %}
 ### <i class="fab fa-git"></i> <strong style="color:lightgreen">merge</strong>
+{% endif %}
 
-<!-- pages-include -->
-:::{margin}
+![merge view](figures/merge_view.svg)
+
+{% if page %}
+:::{card} The `git merge` procedure:
 Starting from the following setup:
 ```text
        C'-----D' main
@@ -24,10 +28,10 @@ A `git merge` will perform:
          /           /
     A---B---C---D---E origin/main
     ```
+:::
+
 ```{note}
 If your current branch is **main**, a `git merge` will be equivalent to `git merge origin/main`.
 ```
-:::
-
-![merge view](figures/merge_view.svg)
+{% endif %}
 
