@@ -3,7 +3,5 @@
 :caption: Working with Git
 
 intro/index
-git/index
-
-DevOps/index
+elements/index
 ```

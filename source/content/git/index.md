@@ -2,7 +2,7 @@
 ```{toctree}
 :maxdepth: {% if build == "slides" %}1{% else %}2{% endif %}
 
-./elements/index
+./about/index
 ./workflow/index
 ./commands/index
 ./update_cycle/index

@@ -6,6 +6,6 @@
 :caption: Working with Git
 {% if build == "slides" %}:numbered:{% endif %}
 
-
 content/intro/index
+content/elements/index
 ```
