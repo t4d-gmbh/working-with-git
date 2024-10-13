@@ -1,8 +1,8 @@
 {% if slide %}
 ### Distribution techniques
-{% else %}
-<i class="fab fa-git"></i> supports several protocols to send and receive content:
 {% endif %}
+
+<i class="fab fa-git"></i> supports several protocols to send and receive content:
 
 ::::::{card} Supported protocols
 :::::{grid}

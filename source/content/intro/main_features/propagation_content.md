@@ -25,24 +25,23 @@ The relationships between snapshots, including parent-child relationships
 {% endif %}
 :::
 :::{grid-item-card} Packfiles
-Binary files that contain the compressed and delta-encoded data for a set of commits
+Binary files containing compressed and delta-encoded data for a set of commits
 {% if page %}
 {% endif %}
 :::
-::::{grid}
+::::
 
-```{admonition}&nbsp;**Not shared** are:
+```{admonition} &nbsp;**Not shared** are:
 :class: warning
+
 ::::{grid}
 :::{grid-item-card} Working Directory
 Local files that have not been added for tracking
-{% if page %}
-{% endif %}
+{% if page %}{% endif %}
 :::
 :::{grid-item-card} Staging Area
 A collection changed files that should be added to the next commit
-{% if page %}
-{% endif %}
+{% if page %} {% endif %}
 :::
 ::::
 ```
