@@ -1,4 +1,4 @@
-### Automatic synchronization
+### Automatic Synchronization
 
 ```{admonition} No coupling between changes and distribution
 :class: warning

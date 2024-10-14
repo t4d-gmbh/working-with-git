@@ -1,4 +1,4 @@
-### Functional consistency
+### Functional Consistency
 
 ```{admonition} <i class="fab fa-git"></i> tracks only the content of files
 :class: warning

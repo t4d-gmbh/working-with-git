@@ -1,4 +1,4 @@
-### Variety of trackable files
+### Variety of Trackable Files
 
 ```{admonition} Not all filetypes and sizes are well supported
 :class: warning
