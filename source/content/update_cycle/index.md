@@ -1,6 +1,6 @@
-# The update cycle
+# The Update Cycle
 
-Git does not automatically synchronize between devices, it is up to the developer to trigger a synchronization.
+<i class="fab fa-git"></i> does not automatically synchronize between devices, it is up to the developer to trigger a synchronization.
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->

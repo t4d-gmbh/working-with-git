@@ -1,8 +1,8 @@
 # Exploration
 
-In this category we gather all services that allow to illustrate, browse and otherwise explore a git repository.
+In this category we gather all services that allow to illustrate, browse and otherwise explore a <i class="fab fa-git"></i> repository.
 
-Most of these features are directly tied to features of `git`, but offer some enhancement in the usability.
+Most of these features are directly tied to features of <i class="fab fa-git"></i>, but offer some enhancement in the usability.
 
 :::{card} Current State
 [on GitLab](https://gitlab.com/t4d-gmbh/weekend-out)
