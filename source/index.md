@@ -10,4 +10,5 @@ content/intro/index
 content/elements/index
 content/history/index
 content/commands/index
+content/update_cycle/index
 ```

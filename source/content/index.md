@@ -4,6 +4,8 @@
 
 intro/index
 elements/index
+history/index
 commands/index
+update_cycle/index
 
 ```
