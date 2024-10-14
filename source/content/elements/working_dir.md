@@ -11,8 +11,12 @@ The Working Directory:
 
 - is like a **"sandbox" for crafting changes**
 - when switching the current branch <i class="fab fa-git"></i> will change its content
-- changed introduced by the developer will not be overwritten by <i class="fab fa-git"></i> 
+- changes introduced by the developer will not be overwritten by <i class="fab fa-git"></i> 
 
 {% if page %}
 :::
+The Working Directory can be recognized by the presence of a (hidden) `.git` folder.
+When you switch branches, the content of the working directory will change to reflect the content of the branch you are switching to.
+The changes you make in the working directory will not be overwritten by <i class="fab fa-git"></i> unless you explicitly tell <i class="fab fa-git"></i> to do so.
+
 {% endif %}
