@@ -2,7 +2,7 @@
 :end-before: <!-- include-before -->
 ```
 ```{toctree}
-:maxdepth: {% if build == "slides" %}1{% else %}4{% endif %}
+:maxdepth: {% if build == "slides" %}1{%else %}4{% endif %}
 :caption: Working with Git
 {% if build == "slides" %}:numbered:{% endif %}
 
@@ -11,4 +11,5 @@ content/elements/index
 content/history/index
 content/commands/index
 content/update_cycle/index
+content/exercise/index
 ```
