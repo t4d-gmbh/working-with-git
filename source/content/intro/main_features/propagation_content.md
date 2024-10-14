@@ -40,7 +40,7 @@ Local files that have not been added for tracking
 {% if page %}{% endif %}
 :::
 :::{grid-item-card} Staging Area
-A collection changed files that should be added to the next commit
+A collection of changed files that should be added to the next commit
 {% if page %} {% endif %}
 :::
 ::::
