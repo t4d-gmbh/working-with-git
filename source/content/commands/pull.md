@@ -2,6 +2,10 @@
 ### <i class="fab fa-git"></i> <strong style="color:red">pull</strong>
 {% endif %}
 
+In short, `git pull` is (usually) a combination of `git fetch` and `git merge`. 
+It fetches the changes from the remote repository and merges them into the current branch.
+This is a very common operation when working with a remote repository and is often used to update your local repository with the changes from the remote repository.
+
 :::::{card} When running `git pull` the following will happen:
 {% if page %}
 Assuming this is the state in which you run a `git pull`:

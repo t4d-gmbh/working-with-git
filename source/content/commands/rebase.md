@@ -6,6 +6,10 @@
 ![rebase view](figures/rebase_view.svg)
 
 {% if page %}
+In short, `git rebase` is used to apply the changes from one branch onto another branch. 
+It differs from `git merge` in that it rewrites the commit history of the current branch. 
+Meaning that the commits from the current branch are applied on top of the other branch.
+
 :::{card} The `git rebase` procedure:
 Starting from the following setup:
 ```text
