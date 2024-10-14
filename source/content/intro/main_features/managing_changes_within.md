@@ -1,5 +1,5 @@
 {% if slide %}
-### Managing changes - within
+### Managing Changes - Within
 {% endif %}
 
 :::::{card} Within a repository
