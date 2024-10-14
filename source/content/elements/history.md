@@ -1,8 +1,8 @@
 {% if slide %}
-### <i class="far fa-history"></i> History
+### <i class="fas fa-history"></i> History
 {% else %}
 
-:::{card} <i class="far fa-history"></i> History
+:::{card} <i class="fas fa-history"></i> History
 {% endif %}
 
 In <i class="fab fa-git"></i> the _History_ is the sequence of commits in a repository.
