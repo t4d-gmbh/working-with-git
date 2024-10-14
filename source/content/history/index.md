@@ -1,4 +1,4 @@
-# <i class="fab fa-git"></i> - Writing history
+# <i class="fab fa-git"></i> - Writing History
 
 With a few exceptions **each commit is linked to one or several parent commits**.
 
