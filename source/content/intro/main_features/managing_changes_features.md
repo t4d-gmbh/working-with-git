@@ -1,5 +1,5 @@
 {% if slide %}
-### Git's Change Management Features
+### <i class="fab fa-git"></i>'s Change Management Features
 {% endif %}
 
 :::{card} <i class="fab fa-git"></i> can control the application of changes:
