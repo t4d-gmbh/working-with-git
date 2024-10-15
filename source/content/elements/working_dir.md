@@ -15,7 +15,9 @@ The Working Directory:
 
 {% if page %}
 :::
-The Working Directory can be recognized by the presence of a (hidden) `.git` folder.
+In most cases the Working Directory can be recognized by the presence of a (hidden) `.git` folder.
+If no such folder can be found, you can run `git rev-parse --git-dir` to display its location.
+
 When you switch branches, the content of the working directory will change to reflect the content of the branch you are switching to.
 The changes you make in the working directory will not be overwritten by <i class="fab fa-git"></i> unless you explicitly tell <i class="fab fa-git"></i> to do so.
 
