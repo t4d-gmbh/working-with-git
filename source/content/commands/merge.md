@@ -5,6 +5,8 @@
 ![merge view](figures/merge_view.svg)
 
 {% if page %}
+In short, `git merge` is used to combine the changes from one branch into another branch.
+
 :::{card} The `git merge` procedure:
 Starting from the following setup:
 ```text

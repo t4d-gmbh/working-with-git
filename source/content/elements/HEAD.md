@@ -9,7 +9,7 @@
 
 HEAD allows to:
 
-- **simplify most commands** as it serves as default branch
+- **simplify most commands** as it serves as default branch.
 - can be used to conveniently **refer to previous commits** (e.g. `HEAD~2`){% if page %}[^sn6]
 
 :::

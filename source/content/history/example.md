@@ -1,5 +1,5 @@
-{% if slide %}
-### A simple example
+{% if build == "slides" %}
+### A Simple Example
 {% endif %}
 
 ```{admonition} <i class="fab fa-git"></i> <strong style="color:black">log</strong>: explore the history

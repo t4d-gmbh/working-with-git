@@ -1,4 +1,4 @@
-# <i class="fab fa-git"></i> - A brief introduction
+# <i class="fab fa-git"></i> - A Brief Introduction
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
@@ -17,8 +17,8 @@
 
 Conceptually, <i class="fab fa-git"></i> is a tool to **track**, **distribute** and **manage** changing content.
 
-### Tracking changes
-Several techniques are applied in combination, allowing to completely document the course of a repository:
+### Tracking Changes
+Several techniques are combined to document the course of a repository thoroughly:
 
 ```{include} ./main_features/tracking_techniques.md
 ```
@@ -32,14 +32,14 @@ Several techniques are applied in combination, allowing to completely document t
 ```
 ```{include} ./main_features/propagation_features.md
 ```
-### Managing changes
+### Managing Changes
 
-In addition to simply distribute changes and states, <i class="fab fa-git"></i> also allows for a fine-grained control on how content should be integrated and/or recombined.
+In addition to distributing changes and states, <i class="fab fa-git"></i> also allows for precise control over content integration and/or recombination.
 
 ```{include} ./main_features/managing_changes_within.md
 ```
 
-Another feature of <i class="fab fa-git"></i> is its capability to act cross repositories: In fact, similar to within repository changes, changes can also be propagated between them:
+Another feature of <i class="fab fa-git"></i> is its ability to act across repositories. Similar to changes within a repository, changes can also be propagated between repositories:
 
 ```{include} ./main_features/managing_changes_between.md
 ```

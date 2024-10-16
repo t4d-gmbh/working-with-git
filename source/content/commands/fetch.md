@@ -6,7 +6,7 @@
 
 {% if page %}
 :::{card} `git fetch` without further arguments runs:
-1. Updates all remote tracking branches
+1. Updates all remote tracking branches ("fetches the changes").
 :::
 
 ```{note}

@@ -9,12 +9,12 @@ Unique identifiers for files and directories using SHA-1
 ```{admonition} Details
 :class: tip, dropdown
 Git uses a cryptographic hash function (SHA-1) to create a unique identifier for each file and directory in the repository.
-This hash is used to identify the contents of the file, and any changes to the file will result in a new hash being generated.
+This hash is used to identify the file's contents, and any changes to the file will generate a new hash.
 ```
 {% endif %}
 :::
 {% if page %}:::{tab}{% else %}:::{card}{% endif%} Snapshots
-Entire repository snapshots at each commit
+Entire repository state captures (snapshots) at each commit
 {% if page %}
 ```{admonition} Details
 :class: tip, dropdown
@@ -30,7 +30,7 @@ Store differences between old and new file versions
 :class: tip, dropdown
 When you make changes to a file, Git doesn't store the entire new version of the file.
 Instead, it stores the differences (or "deltas") between the old and new versions of the file.
-This allows Git to efficiently store multiple versions of a file without having to store the entire file multiple times.
+This allows Git to efficiently store multiple versions of a file without storing the entire file multiple times.
 ```
 {% endif %}
 :::
@@ -40,12 +40,12 @@ Store history as a graph of commits and relationships
 ```{admonition} Details
 :class: tip, dropdown
 Git stores the history of the repository as a graph database, where each commit is a node in the graph, and the edges represent the relationships between commits.
-This allows Git to efficiently navigate the history of the repository and determine the relationships between different commits.
+This setup allows Git to navigate the repository's history efficiently and determine the relationships between different commits.
 ```
 {% endif %}
 :::
 {% if page %}:::{tab}{% else %}:::{card}{% endif%} Index
-Cache of changes ready to be committed
+The cache of changes ready to be committed
 {% if page %}
 ```{admonition} Details
 :class: tip, dropdown

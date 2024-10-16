@@ -1,5 +1,5 @@
 {% if slide %}
-### Managing changes - between
+### Managing Changes - Between
 {% endif %}
 
 :::::{card} Between repositories

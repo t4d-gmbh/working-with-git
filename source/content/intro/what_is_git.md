@@ -17,11 +17,7 @@ A data structure containing a set of files along with some metadata.
 
   changes in a _repository_.
 
-```{admonition} Git
-:class: note
-
-
-```
 * open source
 * supported on all major operating systems <i class="fab fa-linux"></i>&nbsp;<i class="fab fa-windows"></i>&nbsp;<i class="fab fa-apple"></i>
+
 :::
