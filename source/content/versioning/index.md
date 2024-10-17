@@ -1,46 +1,34 @@
 # Versioning
 
 {% if page %}
-Documenting the state of a repository can be done in many ways.
-Introducing some structured form to consistently document a state can help a lot to navigate states.
+Documenting the state of a repository can be approached in various ways.
+However, to enhance both readability and functionality, we strongly recommend following a consistent structure when describing its state.
+One key element of this structure could be a version identifier.
 {% endif %}
 
-A great way to introduce such structure is [versioning](https://en.wikipedia.org/wiki/Software_versioning).
+[Versioning](https://en.wikipedia.org/wiki/Software_versioning) provides a logical framework for creating labels that represent specific states of a repository.
+{% if page %}By doing so, it establishes a structured way to describe those states.
+The exact logic followed can vary depending on the chosen versioning approach, and there are many to choose from.
 
+Determining the best versioning approach can be somewhat subjective.
+However, certain methods are more widely adopted than others.
+{% endif %}Here, we present one of the most common approaches:
+{% if page %}[SemVer](https://wwww.semver.org).{% endif %}
 
-{% if page %}
-Bullet Points:
-
-    What is SemVer? A versioning system that uses a three-part number (MAJOR.MINOR.PATCH) to track changes to your software.
-    Benefits:
-        Easy to understand and communicate changes to your software.
-        Helps users and developers understand the impact of updates.
-        Simplifies dependency management and versioning.
-
-Example:
-
-    1.2.3
-        MAJOR: 1 (breaking changes or significant updates)
-        MINOR: 2 (new features or functionality)
-        PATCH: 3 (bug fixes or minor updates)
-
-Image Suggestion: A diagram showing the three-part version number, with arrows indicating how each part is incremented.
-
-Note: This slide aims to provide a brief introduction to SemVer and how it works. The idea is to show how SemVer provides a simple and consistent way to version software, making it easier to communicate changes and manage dependencies.
-{% endif %}
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
 :maxdepth: 1
+:caption: SemVer
 
-./benefits
 ./semver
+./benefits
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
-```{include} ./benefits.md
-```
 ```{include} ./semver.md
+```
+```{include} ./benefits.md
 ```
 {% endif %}

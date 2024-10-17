@@ -1,13 +1,6 @@
-# Semantic Versioning (SemVer)
+## Semantic Versioning
 
-{% if page %}
-Here we present [SemVer](https://www.semver.org), which is a straight forward approach to 
-
-{% endif %}
-
-```{epigraph}
-A Simple and Consistent Way to Version Your Software
-```
+In short SemVer is versioning system that uses a three-part number ({math}`X.Y.Z`) to track changes to your software.
 
 ```{math}
 :label: SemVer
