@@ -14,5 +14,6 @@ content/update_cycle/index
 content/principles/index
 content/feature_branch/index
 content/versioning/index
+content/useful_commands/index
 content/exercise/index
 ```

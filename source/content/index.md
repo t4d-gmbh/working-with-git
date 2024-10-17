@@ -10,5 +10,6 @@ update_cycle/index
 principles/index
 feature_branch/index
 versioning/index
+useful_commands/index
 exercise/index
 ```
