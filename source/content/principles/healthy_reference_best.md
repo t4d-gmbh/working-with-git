@@ -1,6 +1,5 @@
 ### Best Practice (1/4)
 
-A successful collaboration and development strategy should cultivate healthy states, leading to the first set of best practices:
 
 :::{card} Keep a healthy reference
 - Identify one branch on one location to be the main reference{% if page %}[^sn1]{% endif %}

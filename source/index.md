@@ -11,5 +11,7 @@ content/elements/index
 content/history/index
 content/commands/index
 content/update_cycle/index
+content/principles/index
+content/feature_branch/index
 content/exercise/index
 ```
