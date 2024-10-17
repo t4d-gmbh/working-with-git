@@ -9,5 +9,6 @@ commands/index
 update_cycle/index
 principles/index
 feature_branch/index
+versioning/index
 exercise/index
 ```
