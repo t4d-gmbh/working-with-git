@@ -7,5 +7,6 @@ elements/index
 history/index
 commands/index
 update_cycle/index
+principles/index
 exercise/index
 ```
