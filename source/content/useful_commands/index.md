@@ -1,5 +1,7 @@
 # Useful Commands
 
+This is a selection of commands that can particularly enhance your experience with <i class="fab fa-git"></i>:
+
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
@@ -7,6 +9,7 @@
 :numbered:
 
 ./status
+./git_log
 ./reflog
 ./rebase_i
 ./stash
@@ -14,8 +17,14 @@
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
+
 ::::{dropdown} git status &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-status)
 ```{include} ./status.md
+:start-after: <!-- pages-include -->
+```
+::::
+::::{dropdown} git log &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-log)
+```{include} ./git_log.md
 :start-after: <!-- pages-include -->
 ```
 ::::
@@ -39,4 +48,8 @@
 :start-after: <!-- pages-include -->
 ```
 ::::
+::::{dropdown} git status &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-status)
+```{include} ./status.md
+:start-after: <!-- pages-include -->
+```
 {% endif %}
