@@ -4,7 +4,7 @@
 
 In the <i class="fab fa-git"></i>-world:
 
-**Incremental changes should introduced minimal, self-contained logical steps**
+**Incremental changes should introduce minimal, self-contained logical steps**
 
 
 {% if slide %}
@@ -21,8 +21,6 @@ In addition, commits make up the elementary steps in a git history and can easil
 
 - undone (see e.g. [**git revert**&nbsp;{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-revert))
 - applied onto other branches
-
-As a consequence it can become difficult to identify healthy states which is something that can be circumvented by the use of <i class="fab fa-git"></i> tags:
 
 ```{include} ./steps_best.md
 ```
