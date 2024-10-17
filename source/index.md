@@ -13,5 +13,6 @@ content/commands/index
 content/update_cycle/index
 content/principles/index
 content/feature_branch/index
+content/versioning/index
 content/exercise/index
 ```
