@@ -5,8 +5,7 @@ This is a selection of commands that can particularly enhance your experience wi
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
-:maxdepth: 2
-:numbered:
+:maxdepth: 1
 
 ./status
 ./git_log
