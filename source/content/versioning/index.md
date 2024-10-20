@@ -7,10 +7,10 @@ One key element of this structure could be a version identifier.
 {% endif %}
 
 [Versioning](https://en.wikipedia.org/wiki/Software_versioning) provides a logical framework for creating labels that represent specific states of a repository.
-{% if page %}By doing so, it establishes a structured way to describe those states.
-The exact logic followed can vary depending on the chosen versioning approach, and there are many to choose from.
+{% if page %} It specifies a structured way to describe those states.
+The specific logic used can differ based on the selected versioning method, and there are numerous options available.
 
-Determining the best versioning approach can be somewhat subjective.
+Choosing the most effective versioning approach can be somewhat subjective. 
 However, certain methods are more widely adopted than others.
 {% endif %}Here, we present one of the most common approaches:
 {% if page %}[SemVer](https://wwww.semver.org).{% endif %}
