@@ -2,6 +2,6 @@
 
 :::{card}{% if page %} Idea{% endif %}
 
-Create a separate branch for each new feature or change, allowing for independent development and testing.
+Create a separate branch for each new feature or change, allowing for independent, self-contained development and testing.
 
 :::

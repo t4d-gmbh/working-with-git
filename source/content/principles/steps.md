@@ -15,9 +15,9 @@ In the <i class="fab fa-git"></i>-world:
 ./steps_best
 ```
 {% else %}
-It is up to the developer to decide how many or few edits go into a commit and, similarly to the [Separate subjects](#separate-subjects), what these changes are about.
+It is the developer's choice how many edits to include in a commit and, as previously mentioned in the section "[*separate subjects*](#separate-subjects), what these changes pertain to.
 
-In addition, commits make up the elementary steps in a git history and can easily be:
+In addition, commits make up the elementary steps in a <i class="fab fa-git"></i> history and can easily be:
 
 - undone (see e.g. [**git revert**&nbsp;{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-revert))
 - applied onto other branches
