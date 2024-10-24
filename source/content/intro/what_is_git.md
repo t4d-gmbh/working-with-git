@@ -6,10 +6,10 @@
 A data structure containing a set of files along with some metadata.
 
 ```
-:::{card} [**<i class="fab fa-git"></i>**](https://git-scm.com)
+:::{card} [**<i class="fab fa-git"></i>**](https://git-scm.com) is ...
 
-* distributed version control system
-* software providing functionalities to
+* a distributed version control system (VCS)
+* a software providing functionalities to
 
   - **track**
   - **propagate**
