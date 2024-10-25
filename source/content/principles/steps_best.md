@@ -1,5 +1,16 @@
 ### Best Practice (3/4)
 
+{% if build == "slides" %}
+```{admonition} Best Practices
+:class: tip, margin
+
+1. Keep a healthy reference
+2. Separate changes
+3. Commit complete changes
+4. 
+```
+{% endif %}
+
 :::{card} Commit small but complete changes
 - Decide what changes to include in a commit (use `git add -p`).
 - Make a commit as specific as possible. I.e. include only changes that belong together.
@@ -8,4 +19,5 @@
 :::
 {% if build == "pages" %}
 [^sn2]: As a guideline, you can use the [**Conventional Commits**](https://www.conventionalcommits.org/en/v1.0.0/) specification.
+
 {% endif %}
