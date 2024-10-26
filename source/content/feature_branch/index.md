@@ -11,7 +11,7 @@ In simple terms, the *Feature Branch Approach* describes:
 
 
 ```{epigraph}
-How to manage and organize changes in a controlled and efficient way.
+How to manage and organize changes in a controlled and efficient way?
 ```
 {% if page %}
 
