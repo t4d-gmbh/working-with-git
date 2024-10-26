@@ -5,7 +5,7 @@
 :::{card} <i class="fas fa-folder-open"></i> Working Directory
 {% endif %}
 
-> In <i class="fab fa-git"></i>, the Working Directory refers to the **local folder you are viewing and editing** of the currently checked out branch.
+> In <i class="fab fa-git"></i> , the Working Directory refers to the **local folder you are viewing and editing** of the currently checked out branch.
 
 The Working Directory:
 
