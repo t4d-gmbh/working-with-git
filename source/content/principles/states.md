@@ -4,7 +4,7 @@
 
 With <i class="fab fa-git"></i> this translates to:
 
-**Documenting states is equally important to documenting changes**
+**Documenting states is equally important to documenting changes**.
 
 
 {% if slide %}
