@@ -1,5 +1,5 @@
 {% if slide %}
-### Tracking features
+### Tracking Features
 {% endif %}
 
 :::{card} <i class="fab fa-git"></i> provides version control functionalities to:
