@@ -1,6 +1,6 @@
 ## Semantic Versioning
 
-In short *SemVer* is versioning system that uses a three-part number ({math}`X.Y.Z`) to track changes to your software.
+In short, *SemVer* is a versioning system that uses a three-part number ({math}`X.Y.Z`) to track changes to your software.
 
 ```{math}
 :label: SemVer
