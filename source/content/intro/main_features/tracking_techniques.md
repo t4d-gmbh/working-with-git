@@ -1,5 +1,5 @@
 {% if slide %}
-### Tracking techniques
+### Tracking Techniques
 {% endif %}
 
 {% if page %}::::{tabs}{% endif %}
