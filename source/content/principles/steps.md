@@ -1,10 +1,10 @@
 ## Meaningful Steps
 
-> Incremental change is easier to deal with if single increments are logical, self-contained but remain as lean as possible.
+> Incremental changes are easier to deal with if single increments are logical, self-contained but remain as lean as possible.
 
 In the <i class="fab fa-git"></i>-world:
 
-**Incremental changes should introduce minimal, self-contained logical steps**
+**Incremental changes should introduce minimal, self-contained logical steps**.
 
 
 {% if slide %}
