@@ -5,7 +5,7 @@
 :::{card} <i class="fas fa-hat-wizard"></i> HEAD
 {% endif %}
 
-> In <i class="fab fa-git"></i> **HEAD defines the currently checked out branch**
+> In <i class="fab fa-git"></i> **HEAD corresponds{% if page %}[^sn7]{% endif %} to the currently checked out branch**
 
 HEAD allows to:
 
@@ -15,5 +15,6 @@ HEAD allows to:
 :::
 
 [^sn6]: `HEAD~2` refers to the 2nd commit before the commit the current branch points to.
+[^sn7]: HEAD is actually a variables, and therefore defines the checked out branch.
 {% endif %}
 
