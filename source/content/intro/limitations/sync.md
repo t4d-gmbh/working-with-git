@@ -7,6 +7,6 @@ This means that just because a change (like a commit) happens in the repository,
 ```
 
 Therefore:
-- collaboration mediated by <i class="fab fa-git"></i> happens asynchronously, i.e., changes are propagated when explicitly requested (e.g., by pushing or pulling).
-- simultaneous editing is not supported. If two users edit the same file at the same time, the changes must be merged manually.
-- synchronizing the state of a repository is part of the <i class="fab fa-git"></i> workflow
+- Collaboration mediated by <i class="fab fa-git"></i> happens asynchronously, i.e., changes are propagated when explicitly requested (e.g., by pushing or pulling).
+- Simultaneous editing is not supported. If two users edit the same file at the same time, the changes must be merged manually.
+- Synchronizing the state of a repository is part of the <i class="fab fa-git"></i> workflow.
