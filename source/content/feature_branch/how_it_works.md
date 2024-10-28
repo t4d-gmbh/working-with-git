@@ -1,6 +1,6 @@
 {% if slide %}### How It Works{% endif %}
 
-:::{card}{% if page %} How It Works{% endif %}
+:::{card}{% if page %} How It Works:{% endif %}
 
 1. Create a new branch for a specific feature or change.
 1. Apply the concept of a healthy reference to the feature branch.
