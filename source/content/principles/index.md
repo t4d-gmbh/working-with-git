@@ -19,11 +19,11 @@ The usage of <i class="fab fa-git"></i> does not necessarily facilitate collabor
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
-Even though with <i class="fab fa-git"></i> you can track and document strictly all changes in a repository, simply using <i class="fab fa-git"></i> does not yet make you a good collaborator.
+Even though <i class="fab fa-git"></i> allows you to strictly track and document all changes in a repository, simply using <i class="fab fa-git"></i> does not automatically make you a good collaborator.
 
-What exactly are good usage patterns is a well discussed and opinionated subject.
+What defines good practices is a widely discussed and often opinionated topic.
 
-Instead of contributing to this discussion we will point out a few principles that simplify interactions mediated by <i class="fab fa-git"></i>.
+Rather than adding to this debate, we will highlight a few principles that simplify interactions facilitated by <i class="fab fa-git"></i>.
 
 ```{include} ./healthy_reference.md
 ```
