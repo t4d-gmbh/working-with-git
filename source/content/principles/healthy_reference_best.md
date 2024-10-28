@@ -11,7 +11,7 @@
 ```
 {% endif %}
 
-:::{card} Keep a healthy reference
+:::{card} Tips to keep a healthy reference:
 - Identify one branch on one location to be the main reference{% if page %}[^sn1]{% endif %}
 - Never develop directly on the main reference
 - Never modify shared history

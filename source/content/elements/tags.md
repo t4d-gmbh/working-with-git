@@ -9,8 +9,8 @@
 
 A tag:
 
-- allows to **flag a particular version** of the repository
-- can be used to **document states**
+- allows to **flag a particular version** of the repository;
+- can be used to **document states**.
 
 {% if page %}
 :::

@@ -9,9 +9,9 @@
 
 A branch:
 
-- offers the possibility to **develop and test new features**
-- allows to maintain **various versions** of a repository
-- is **updated automatically with new commits** being added
+- offers the possibility to **develop and test new features**;
+- allows to maintain **various versions** of a repository;
+- is **updated automatically with new commits** being added.
 
 ```{admonition} <i class="fas fa-code-branch"></i> branches are dynamic pointers
 :class: tip

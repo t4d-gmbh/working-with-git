@@ -4,12 +4,12 @@
 
 In the <i class="fab fa-git"></i>-context this translates to:
 
-**At any time all developers know of a specific commit on a specific branch that represents a healthy state**
+**At any time all developers know of a specific commit on a specific branch that represents a healthy state**.
 
 More precisely this state should:
 
-- contain most of the history, i.e. as recent as possible.
-- have a minimal chance to contain errors.
+- contain most of the history, i.e. as recent as possible;
+- have a minimal chance to contain errors;
 - be functional. Meaning that it should be possible to build and run the software.
 
 {% if slide %}

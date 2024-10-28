@@ -4,9 +4,9 @@
 
 :::{card} <i class="fab fa-git"></i> provides version control functionalities to:
 
-- generate a history of changes in a repository
-- maintain several versions of a single repository
-- verify the integrity of the history{% if page %}[^sn1]{% endif %}
+- generate a history of changes in a repository,
+- maintain several versions of a single repository,
+- verify the integrity of the history.{% if page %}[^sn1]{% endif %}
 
 :::
 

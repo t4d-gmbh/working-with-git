@@ -1,6 +1,6 @@
 # <i class="fab fa-git"></i> - Basic Elements
 
-From a users perspective working with <i class="fab fa-git"></i> consists of interacting with 6 basic elements:
+From a user's perspective, working with <i class="fab fa-git"></i> consists of interacting with 6 basic elements:
 
 
 {% if build == "slides" %}

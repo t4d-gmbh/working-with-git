@@ -9,10 +9,10 @@
 
 A commit:
 
-- is the **result of an action initiated by a developer**
-- contains **changes the developer decided to add**
-- can be seen as a **snapshot of the entire repository** including a reference to the parent commits(s){% if page %}[^sn5]
-- can be used to **document introduced changes**
+- is the **result of an action initiated by a developer**;
+- contains **changes the developer decided to add**;
+- can be seen as a **snapshot of the entire repository** including a reference to the parent commits';{% if page %}[^sn5]
+- can be used to **document introduced changes**.
 
 :::
 

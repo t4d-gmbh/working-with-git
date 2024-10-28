@@ -5,8 +5,8 @@
 :::{card} <i class="fas fa-history"></i> History
 {% endif %}
 
-> In <i class="fab fa-git"></i> the _History_ is the sequence of commits in a repository.
-- **Record of changes** over time by various developers.
+> In <i class="fab fa-git"></i>, the _History_ is the sequence of commits in a repository.
+- A **record of changes** made by various developers over time.
 - Enables **navigation** and **inspection** of changes.
 - Essential for understanding, troubleshooting, and reverting changes. Clear and informative commit messages are crucial.
 

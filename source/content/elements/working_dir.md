@@ -5,13 +5,13 @@
 :::{card} <i class="fas fa-folder-open"></i> Working Directory
 {% endif %}
 
-> In <i class="fab fa-git"></i>, the Working Directory refers to the **local folder you are viewing and editing** the content of the currently checked out branch.
+> In <i class="fab fa-git"></i>, the Working Directory refers to the **local folder you are viewing and editing** of the currently checked out branch.
 
 The Working Directory:
 
-- is like a **"sandbox" for crafting changes**
-- when switching the current branch <i class="fab fa-git"></i> will change its content
-- changes introduced by the developer will not be overwritten by <i class="fab fa-git"></i> 
+- Is like a **"sandbox" for crafting changes**.
+- When switching the current branch <i class="fab fa-git"></i> will change its content.
+- Changes introduced by the developer will not be overwritten by <i class="fab fa-git"></i>.
 
 {% if page %}
 :::

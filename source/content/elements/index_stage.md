@@ -9,9 +9,9 @@
 
 The Staging Area:
 
-- allows to manage **the content of a new commit**
-- can be used to **temporarily store away uncommitted changes**
-- **highlights the changes to be introduced** by a new commit
+- allows to manage **the content of a new commit**;
+- can be used to **temporarily store away uncommitted changes**;
+- **highlights the changes to be introduced** by a new commit.
 
 {% if page %}
 :::
