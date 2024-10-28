@@ -20,7 +20,7 @@ As a developer, one of your primary tasks is to write clear and concise <i class
 These messages are crucial as they explain the changes made. 
 However, relying solely on them can make it difficult to identify specific states of a repository. 
 When writing only <i class="fab fa-git"></i> commit messages, **the state of a repository remains undocumented**. 
-As a result, identifying healthy states can become challenging; however, this issue can be addressed using <i class="fab fa-git"></i> tags.
+As a result, identifying healthy states can become challenging. However, this can easily be addressed using <i class="fab fa-git"></i> tags.
 
 ```{include} ./states_best.md
 ```
