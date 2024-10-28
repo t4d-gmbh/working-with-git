@@ -2,12 +2,14 @@
 ### A Simple Example
 {% endif %}
 
+{% if page %}
 ```{admonition} <i class="fab fa-git"></i> <strong style="color:black">log</strong>: explore the history
 :class: note, margin
 
-- <i class="fas fa-code-commit"></i> commits are indicated with `* <hash...>` followed by the commit message
+- <i class="fas fa-code-commit"></i> commits are indicated with `* <hash>` followed by the commit message
 - <i class="fas fa-code-branch"></i> Branches, <i class="fas fa-tag"></i> Tags and <i class="fas fa-hat-wizard"></i> HEAD are indicated in `(...)` after the commit hash
 ```
+{% endif %}
 
 :::{card} `git log --all --decorate --oneline --graph`
 :class: smaller

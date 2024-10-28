@@ -1,14 +1,13 @@
 ### Functional Consistency
-
 ```{admonition} <i class="fab fa-git"></i> tracks only the content of files
 :class: warning
-It does not track the functionality of whatever the content implements.
+Git tracks only the content of files, not the functionality of the code within them.
 ```
 
 There is **no** guarantee that:
 
 - Git will identify breaking changes as a conflict{% if page %}[^sn3]{% endif %}
-- Two functioning versions do not lead to a dysfunctional combination
+- Two functioning versions combined will not result in a dysfunctional version
 
 {% if page %}
 [^sn3]: This is rather obvious, if you think about it. But is something that might not be thought about if <i class="fab fa-git"></i> is not reporting any conflicts when merging changes from different sources.

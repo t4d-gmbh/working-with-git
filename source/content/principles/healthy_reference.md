@@ -1,6 +1,6 @@
 ## Healthy Reference
 
-> A pre-requirement to successfully develop any change, or new feature, is **to be able to depart from a functional state**.
+> A pre-requirement to successfully develop any change, or new feature, is **to be able to start-off from a functional state**.
 
 In the <i class="fab fa-git"></i>-context this translates to:
 

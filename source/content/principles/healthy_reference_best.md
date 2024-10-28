@@ -1,6 +1,6 @@
 ### Best Practice (1/4)
 
-{% if build == "slides" %}
+{% if build == "slide" %}
 ```{admonition} Best Practices
 :class: tip, margin
 
