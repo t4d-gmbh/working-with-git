@@ -5,13 +5,13 @@
 :::{card} <i class="fas fa-code-commit"></i> Commits
 {% endif %}
 
-> A <i class="fab fa-git"></i> commit represents **a single step in the history of a repository**
+> A <i class="fab fa-git"></i> commit represents **a single step in the history of a repository**.
 
 A commit:
 
-- is the **result of an action initiated by a developer**;
-- contains **changes the developer decided to add**;
-- can be seen as a **snapshot of the entire repository** including a reference to the parent commits';{% if page %}[^sn5]
+- is the **result of an action initiated by a developer**,
+- contains **changes the developer decided to add**,
+- can be seen as a **snapshot of the entire repository** including a reference to the parent commits',{% if page %}[^sn5]
 - can be used to **document introduced changes**.
 
 :::
