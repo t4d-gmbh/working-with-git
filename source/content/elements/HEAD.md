@@ -5,16 +5,16 @@
 :::{card} <i class="fas fa-hat-wizard"></i> HEAD
 {% endif %}
 
-> In <i class="fab fa-git"></i> **HEAD corresponds{% if page %}[^sn7]{% endif %} to the currently checked out branch**
+> In <i class="fab fa-git"></i> **HEAD corresponds{% if page %}[^sn7]{% endif %} to the currently checked out branch**.
 
 HEAD allows to:
 
-- **simplify most commands** as it serves as default branch;
-- can be used to conveniently **refer to previous commits**. (e.g. `HEAD~2`){% if page %}[^sn6]
+- **simplify most commands** as it serves as default branch,
+- can be used to conveniently **refer to previous commits**, e.g. `HEAD~2`.{% if page %}[^sn6]
 
 :::
 
-[^sn6]: `HEAD~2` refers to the 2nd commit before the commit the current branch points to.
-[^sn7]: HEAD is actually a variables, and therefore defines the checked out branch.
+[^sn6]: `HEAD~2` would refer to the commit two steps before the one the current branch points to.
+[^sn7]: HEAD is actually a variable, and therefore defines the checked out branch.
 {% endif %}
 
