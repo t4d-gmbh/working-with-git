@@ -47,8 +47,5 @@ This is a selection of commands that can particularly enhance your experience wi
 :start-after: <!-- pages-include -->
 ```
 ::::
-::::{dropdown} git status &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-status)
-```{include} ./status.md
-:start-after: <!-- pages-include -->
-```
+
 {% endif %}
