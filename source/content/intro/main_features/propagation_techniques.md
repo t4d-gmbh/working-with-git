@@ -23,7 +23,7 @@ Used for SSH connections to remote repositories
 Use a public/private key pair to authenticate with the remote
 :::
 :::{card} Username/Password
-Provide username and password for autentiation with the remote
+Provide username and password to authenticate with the remote
 :::
 
 ```
@@ -43,7 +43,7 @@ Used for HTTPS connections to remote repositories
 :class: note, dropdown
 
 :::{card} Username/Password
-Provide username and password for autentiation with the remote
+Provide username and password to authenticate with the remote
 :::
 :::{card} OAuth Token
 Usually obtained through the remote's API or web interface
