@@ -11,7 +11,7 @@ This leads to limited support for:
 - Filetypes that include metadata (e.g. `.docx`)
 - Large files (<i class="fab fa-git"></i>'s size limit for a single file is 2 GB){% if page %}[^sn4]{% endif %}
 
-{% if slides %}
+{% if slide %}
 How to deal with these limitations will be discussed later.
 {% endif %}
 
