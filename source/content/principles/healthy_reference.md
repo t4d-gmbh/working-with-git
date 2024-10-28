@@ -1,16 +1,16 @@
 ## Healthy Reference
 
-> A pre-requirement to successfully develop any change, or new feature, is **to be able to start-off from a functional state**.
+> A prerequisite for successfully developing any change or new feature is **starting from a functional state**.
 
-In the <i class="fab fa-git"></i>-context this translates to:
+In the context of <i class="fab fa-git"></i>-, this means that:
 
-**At any time all developers know of a specific commit on a specific branch that represents a healthy state**.
+**At any time, all developers are aware of a specific commit on a specific branch that represents a healthy state**.
 
-More precisely this state should:
+More precisely, this state should:
 
-- contain most of the history, i.e. as recent as possible;
-- have a minimal chance to contain errors;
-- be functional. Meaning that it should be possible to build and run the software.
+- Contain most of the history, i.e. as recent as possible.
+- Have a minimal chance of containing errors.
+- Be functional, meaning it should be possible to build and run the software.
 
 {% if slide %}
 ```{toctree}
@@ -20,7 +20,7 @@ More precisely this state should:
 ./healthy_reference_best
 ```
 {% else %}
-A successful collaboration and development strategy should cultivate healthy states, leading to the first set of best practices:
+A successful collaboration and development strategy should cultivate these healthy states, leading to the following set of best practices:
 
 ```{include} ./healthy_reference_best.md
 ```
