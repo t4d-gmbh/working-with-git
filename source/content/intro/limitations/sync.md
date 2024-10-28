@@ -4,7 +4,7 @@
 :class: warning
 Synchronization is not coupled to change events in a repository. 
 {% if page %}
-This means that just because a change (like a commit) happens in the repository, it doesn't automatically trigger synchronization across all copies (clones) of the repository.
+This means that a change, such as a commit, in the repository doesn't automatically trigger synchronization across all copies (clones) of the repository.
 {% endif %}
 ```
 
