@@ -4,14 +4,49 @@ Thank you for your interest in contributing to our documentation!
 We appreciate your help in making this course better.
 Please follow the guidelines below to ensure a smooth contribution process.
 
-## General Guidelines 📝
+## General Guidelines 📜
 
 - **Be Respectful**: Treat all contributors with respect and kindness.
-  We are all here to learn and improve.
-- **Read the course content**: Familiarize yourself with the existing content before making changes.
-  This will also help you understand the structure and style.
+  We are all here to learn and improve together.
+- **Read the Course Content**: Familiarize yourself with the existing content before making changes.
+  This will help you understand the structure and style of the documentation.
 - **Use Clear Language**: Aim for clarity and conciseness in your writing.
-  Avoid jargon unless you are using terms that are generally understood.
+  Avoid jargon unless you are using terms that are widely understood.
+
+## We Welcome Contributions 👋
+
+Here are some ways you can contribute:
+
+- **Fixing Typos**: Simple fixes, such as correcting typos or grammatical errors, are always appreciated!
+- **Improving Clarity**: If you encounter sections that are unclear, feel free to rewrite them for better understanding.
+- **Adding Examples**: Examples can significantly enhance the documentation. If you have a relevant use case, consider adding it.
+- **Suggesting Additions**: If you believe the course is missing crucial aspects, let us know by [creating an Issue](https://github.com/t4d-gmbh/working-with-git/issues/new).
+
+## Declaring Contributions 📝
+
+In general, please start by [creating an Issue](https://github.com/t4d-gmbh/working-with-git/issues/new) that describes the edits you propose.
+
+If you would like to **fix typos, grammatical errors, or make other cosmetic changes**, you can skip this step.
+
+## Making Contributions ✨
+
+_This follows the procedure discussed in the [Contributing to 🔓 Open Source Repositories](https://t4d-gmbh.github.io/git-and-its-remotes/content/contributing/index.html) chapter of the [git-and-its-remotes](https://t4d-gmbh.github.io/git-and-its-remotes/index.html) course module._
+
+1. 🍴 [Fork the Repository](https://github.com/t4d-gmbh/working-with-git/fork) to create your own copy to work on.
+2. ✏️ Implement your changes in your fork of the repository.
+   
+   - Follow the steps in the [Setting Up Your Environment ⚙️](#setting-up-your-environment-%EF%B8%8F) section to set up your local development environment.
+   - Details about how the slides and pages are implemented can be found in the [Implementing Changes 🛠️](#implementing-changes-%EF%B8%8F) section.
+
+3. 🚀 Submit your changes by creating a Pull Request.
+
+   Once you have completed your implementation, go to the original repository on GitHub and open a Pull Request.
+
+   Link the Pull Request to the Issue you created earlier and provide a clear description of your changes and their necessity.
+
+🌟 Thank you very much for your contribution! 🌟
+
+---
 
 ## Setting Up Your Environment ⚙️
 
