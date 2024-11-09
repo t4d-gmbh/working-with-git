@@ -15,17 +15,17 @@ A <i class="fab fa-git"></i> repository is no different:
 ./separate_best
 ```
 {% else %}
-Typically, **a repository contains various types of files** and **a developer performs various tasks**, like
-- adding new features
-- refactoring existing code
-- fixing typos
-- completing the documentation.
-- ...
+Typically, **a repository contains various types of files** and **a developer performs various tasks**, like:
+- adding new features,
+- refactoring existing code,
+- fixing typos,
+- completing the documentation,
+- etc.
 
-With <i class="fab fa-git"></i> any edit can lead to a commit and a branch can consist of any sequence of commits.
-It is up to the developer to associate branches with specific subjects or tasks and distribute commits onto these branches in a meaningful manner.
+With <i class="fab fa-git"></i>, any edit can lead to a commit, and a branch can consist of any sequence of commits.
+It is the developer's responsability to associate branches with specific subjects or tasks and to distribute commits across these branches in a meaningful way.
 
-Following the history of a repository becomes easier if the single branches incorporate some subject specificity, leading to a further set of best practices:
+Following the history of a repository becomes easier when individual branches have specific subjects, leading to this second set of best practices:
 
 ```{include} ./separate_best.md
 ```

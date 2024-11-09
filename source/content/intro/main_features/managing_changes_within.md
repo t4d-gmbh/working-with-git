@@ -22,7 +22,7 @@ Events in the history can be reordered or combined
 :::
 ::::
 ::::{grid}
-:::{grid-item-card} Selecitively apply
+:::{grid-item-card} Selectively apply
 Decide which version should have changes applied
 {% if page %}
 ```{admonition} 
@@ -30,7 +30,7 @@ Decide which version should have changes applied
 ```
 {% endif %}
 :::
-:::{grid-item-card} Use relative chages
+:::{grid-item-card} Use relative changes
 Treat the difference between versions as applicable changes
 {% if page %}
 ```{admonition} 

@@ -11,7 +11,7 @@
 ```
 {% endif %}
 
-:::{card} Use branches to isolate changes
-- Agglomerate commits with a similar subject or purpose in a common branch
-- Incorporate branches with completed purpose, e.g., a feature, a bug fix, or a documentation update is completed in its entirety.
+:::{card} Use branches to isolate changes:
+- Group commits with a similar subject or purpose in a common branch.
+- Merge branches once their purpose is complete, for instance after finishing to develop a feature, fix a bug, or writing the documentation.
 :::

@@ -11,9 +11,9 @@
 ```
 {% endif %}
 
-:::{card} Commit small but complete changes
+:::{card} Commit small but complete changes:
 - Decide what changes to include in a commit (use `git add -p`).
-- Make a commit as specific as possible, i.e. include only changes that belong together.
+- Make a commit as specific as possible, i.e., include only changes that belong together.
 - Write commit messages that specify the purpose of the commit{% if build == "pages" %} [^sn2] {% endif %}.
 - Include as few changes as possible into a commit. {% if build == "pages" %} Lots of changes make it harder to understand the purpose of the commit. Consider splitting the changes into multiple commits and use branches to isolate changes. {% endif %}
 :::

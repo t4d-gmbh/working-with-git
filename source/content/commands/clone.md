@@ -5,11 +5,11 @@
 ![clone view](figures/clone_view.svg)
 
 {% if page %}
-:::{card} A `git clone <url>` performs the following operations:
+:::{card} Running `git clone <url>` performs the following operations:
 
-1. Copies the remote repository
-1. Creates tracking branches for all branches on the remote repo.
-1. Checks out the active branch from the remote repo.
+1. Copy the remote repository
+1. Create tracking branches for all remote branches.
+1. Check out the active branch from the remote repository.
 
 :::
 

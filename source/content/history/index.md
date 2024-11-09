@@ -1,8 +1,6 @@
 # <i class="fab fa-git"></i> - Writing History
 
-With a few exceptions **each commit is linked to one or several parent commits**.
-
-> A **branch like-structure of commits will form** describing the history of the repository when working with <i class="fab fa-git"></i>.
+> With a few exceptions **each commit is linked to one or several parent commits** allowing for a **branch like-structure of commits** describing the repository's history while working with <i class="fab fa-git"></i>.
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->

@@ -12,7 +12,7 @@ Exchange changes between two repositories
 Apply changes from one repository to another
 {% if page %}{% endif %}
 :::
-:::{grid-item-card} Use relative chages
+:::{grid-item-card} Use relative changes
 Treat the difference between repositories as applicable change
 {% if page %}{% endif %}
 :::

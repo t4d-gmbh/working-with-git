@@ -15,7 +15,7 @@
 In <i class="fab fa-git"></i> the _History_ refers to the **sequence of commits** made in a repository. This sequence represents a comprehensive **record of changes** over time, introduced by various developers. Each commit captures a snapshot of the project at a specific point, detailing modifications and additions.
 
 Key aspects of the history include:
-- **Navigation**: Allows developers to traverse through different stages of the project, understanding its evolution.
+- **Navigation**: Allows developers to explore different stages of the project, understanding its evolution.
 - **Inspection**: Facilitates the examination of specific changes, helping to identify the reasons behind them.
 - **Troubleshooting**: Aids in diagnosing issues by reviewing past changes and their impacts.
 - **Reverting**: Enables the rollback of changes if necessary, ensuring stability and continuity.
