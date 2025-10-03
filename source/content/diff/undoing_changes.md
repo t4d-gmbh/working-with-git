@@ -1,16 +1,11 @@
 {% if slide %}
 ### Going Back in Time: Undoing Changes
-{% endif %}
-
-{% if slide %}
-When you need to **undo changes** or **go back to a previous state**, Git offers several approaches. **Choose carefully** - some methods rewrite history!
 {% else %}
-
 ## Going Back in Time: Undoing Changes
-
-When you need to **undo changes** or **go back to a previous state**, Git offers several approaches. **Choose carefully** - some methods rewrite history!
-
 {% endif %}
+
+{% if page %}
+When you need to **undo changes** or **go back to a previous state**, Git offers several approaches. **Choose carefully** - some methods rewrite history!
 
 ### Safe Methods (Preserve History)
 
@@ -73,8 +68,6 @@ git rebase -i HEAD~3
 **Rewrites commit history**. Powerful but **dangerous** on shared branches.
 :::
 ::::
-
-{% if page %}
 
 ### When to Use Which Method?
 

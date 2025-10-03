@@ -8,6 +8,7 @@
 
 {% endif %}
 
+{% if page %}
 ### Basic `git diff` Usage
 
 ::::{grid}
@@ -44,6 +45,7 @@ Shows changes between any two commits
 :::
 ::::
 
+{% else %}
 ### Understanding `git diff` Output
 
 ```{code-block} diff
@@ -65,6 +67,7 @@ index 83db48f..84d55c5 100644
  
  if __name__ == "__main__":
 ```
+{% endif %}
 
 ::::{grid}
 :::{grid-item-card} <i class="fa-solid fa-minus"></i> Lines removed

@@ -16,30 +16,38 @@ Git provides powerful tools to **investigate** and **navigate** through your pro
 
 ::::{grid}
 :::{grid-item-card} <i class="fa-solid fa-history"></i> `git log`
+{% if page %}
 ```bash
 git log --oneline --graph --all
 ```
+{% endif %}
 Shows commit history with visual branch structure
 :::
 :::{grid-item-card} {octicon}`history;0.8em` `git show`
+{% if page %}
 ```bash
 git show <commit-hash>
 ```
+{% endif %}
 Shows details of a specific commit including changes
 :::
 ::::
 
 ::::{grid}
 :::{grid-item-card} <i class="fa-solid fa-search"></i> `git blame`
+{% if page %}
 ```bash
 git blame <filename>
 ```
+{% endif %}
 Shows who changed each line and when
 :::
 :::{grid-item-card} {octicon}`diff;0.8em` `git diff`
+{% if page %}
 ```bash
 git diff <commit1>..<commit2>
 ```
+{% endif %}
 Compare changes between any two points in history
 :::
 ::::
