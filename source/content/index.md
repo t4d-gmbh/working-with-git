@@ -6,6 +6,7 @@ intro/index
 elements/index
 history/index
 commands/index
+diff/index
 update_cycle/index
 principles/index
 feature_branch/index
