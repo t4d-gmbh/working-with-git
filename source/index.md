@@ -5,7 +5,7 @@
 
 ### Authors
 
-**Dr. Jonas I. Liechti** 
+**Dr. Jonas I. Liechti**  
 **Dr. Matteo Delucchi**
 
 
