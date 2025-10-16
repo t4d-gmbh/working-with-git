@@ -8,6 +8,10 @@
 **Dr. Jonas I. Liechti**  
 **Dr. Matteo Delucchi**
 
+### Editors
+
+**Barbara Mejia**
+
 
 ```{toctree}
 :maxdepth: {% if build == "slides" %}1{%else %}4{% endif %}
