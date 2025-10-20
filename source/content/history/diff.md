@@ -1,7 +1,7 @@
 {% if slide %}
 ### `git diff` -  What changed between here and there?
 {% endif %}
-<strong style="color:black">git diff &nbsp;[{octicon}`link-external;0.8em;log`](https://git-scm.com/docs/git-diff)</strong> 
+<strong style="color:black">git diff &nbsp;[{octicon}`link-external;0.8em;log`](https://git-scm.com/docs/git-diff)</strong> shows you **what exactly changed** between different files, branches and even repositories. 
 
 {% if page %}
 `git diff` is one of the most essential commands for investigating changes in your Git repository. It shows you **exactly what changed** between different versions of your files.
@@ -41,6 +41,11 @@ Shows changes between any two commits
 ::::
 
 {% endif %}
+```{admonition} Create patches:
+:class: tip, margin
+- `git diff > my.patch`
+- `git apply my.patch`
+```
 
 :::::{card} Example: `git diff`:
 :class: smaller
