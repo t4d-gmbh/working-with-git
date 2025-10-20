@@ -13,6 +13,7 @@
 ./commit
 ./push
 ./pull
+./diff
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
@@ -50,6 +51,11 @@
 ::::{dropdown} pull &nbsp;[{octicon}`link-external;0.8em;pull`](https://git-scm.com/docs/git-pull)
 :class-title: pull
 ```{include} ./pull.md
+```
+::::
+::::{dropdown} diff &nbsp;[{octicon}`link-external;0.8em;diff`](https://git-scm.com/docs/git-diff)
+:class-title: diff
+```{include} ./diff.md
 ```
 ::::
 {% endif %}

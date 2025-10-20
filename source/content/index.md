@@ -4,8 +4,8 @@
 
 intro/index
 elements/index
-history/index
 commands/index
+history/index
 diff/index
 update_cycle/index
 principles/index

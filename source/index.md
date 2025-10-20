@@ -13,15 +13,15 @@
 **Barbara Mejia**
 
 
-```{toctree}
+```{toctree} 
 :maxdepth: {% if build == "slides" %}1{%else %}4{% endif %}
 :caption: Content
 {% if build == "slides" %}:numbered:{% endif %}
 
 content/intro/index
 content/elements/index
-content/history/index
 content/commands/index
+content/history/index
 content/diff/index
 content/update_cycle/index
 content/principles/index
