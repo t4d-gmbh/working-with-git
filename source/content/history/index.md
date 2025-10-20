@@ -1,21 +1,22 @@
-# <i class="fab fa-git"></i> - Exploring History
+# <i class="fab fa-git"></i> - History
 
-> **A commit is linked to one or several parent commits** allowing for a **branch like-structure of commits** describing the repository's history while working with <i class="fab fa-git"></i>.
+> **A commit is linked to one or several parent commits** leading to a **branch like-structure of commits** when working with <i class="fab fa-git"></i>.
 
-:::{card} How can we explore this history?
+{% if page %}
+```{include} ./how_explore.md
+```
+```{include} ./how_change.md
+```
+{% else %}
+<!-- BUILDING THE SLIDES -->
+```{toctree}
+:maxdepth: 2
+:hidden:
 
-In particular we might like to know general things like:
-
-- What happened when/where?
-- What changed between here and there?
-
-And particular things like:
-
-- What exaclty changed at a specific point?
-- When and who changed a specific line in a file?
-- What is "my history", i.e. what was I doing?
-:::
-
+./how_explore.md
+./how_change.md
+```
+{% endif %}
 
 
 {% if build == "slides" %}
@@ -24,10 +25,13 @@ And particular things like:
 :maxdepth: 2
 :hidden:
 
-./commands.md
+./historian.md
+./editor.md
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
-```{include} ./commands.md
+```{include} ./historian.md
+```
+```{include} ./editor.md
 ```
 {% endif %}

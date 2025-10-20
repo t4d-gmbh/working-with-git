@@ -1,4 +1,4 @@
-### The <i class="fab fa-git"></i>-Historian Toolset
+### The <i class="fab fa-git"></i>-Historian's Toolset
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
