@@ -4,7 +4,6 @@
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
 :maxdepth: 2
-:numbered:
 
 ./clone
 ./fetch
