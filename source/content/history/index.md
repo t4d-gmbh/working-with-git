@@ -5,8 +5,6 @@
 {% if page %}
 ```{include} ./how_explore.md
 ```
-```{include} ./how_change.md
-```
 {% else %}
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
