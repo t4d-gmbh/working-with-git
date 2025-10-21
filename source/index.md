@@ -14,7 +14,7 @@ Dr. Matteo Delucchi
 
 :::{admonition} Editors
 :class: note, margin
-Dr. Barbara Mejia
+Barbara Mejia
 :::
 {% else %}
 ### Authors
@@ -24,7 +24,7 @@ Dr. Barbara Mejia
 
 ### Editors
 
-**Dr. Barbara Mejia**
+**Barbara Mejia**
 {% endif %}
 
 ### Content
