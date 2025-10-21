@@ -1,6 +1,9 @@
 .pull {
   color: red;
 }
+.diff {
+  color: #ca80e9;
+}
 .push {
   color: darkviolet;
 }

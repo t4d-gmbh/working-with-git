@@ -4,9 +4,9 @@
 
 intro/index
 elements/index
-history/index
 commands/index
 update_cycle/index
+history/index
 principles/index
 feature_branch/index
 versioning/index
