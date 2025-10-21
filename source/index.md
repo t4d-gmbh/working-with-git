@@ -3,14 +3,29 @@
 ```
 
 
+{% if build == "slides" %}
+<!-- <p style="font-size: 0.9em;"><strong>Dr. Jonas I. Liechti</strong><br>
+<strong>Dr. Matteo Delucchi</strong></p> -->
+:::{admonition} Authors
+:class: note, margin
+Dr. Jonas I. Liechti
+Dr. Matteo Delucchi
+:::
+
+:::{admonition} Editors
+:class: note, margin
+Dr. Barbara Mejia
+:::
+{% else %}
 ### Authors
 
-**Dr. Jonas I. Liechti**  
+**Dr. Jonas I. Liechti**
 **Dr. Matteo Delucchi**
 
 ### Editors
 
-**Barbara Mejia**
+**Dr. Barbara Mejia**
+{% endif %}
 
 
 ```{toctree} 
