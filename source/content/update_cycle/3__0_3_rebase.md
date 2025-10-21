@@ -1,5 +1,5 @@
 {% if slide %}
-### step 3/0.3 - `rebase`
+###  3{octicon}`sync;0.8em`/ 0.3{octicon}`sync;0.8em` - `rebase`
 {% endif %}
 
 {% if slide %}
