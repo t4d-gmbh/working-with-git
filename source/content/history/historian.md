@@ -19,7 +19,7 @@
 ```
 ::::
 ::::{dropdown} `git diff` - What changed between here and there?
-:class-title: diff
+:class-title: log 
 ```{include} ./diff.md
 ```
 ::::

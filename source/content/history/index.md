@@ -14,11 +14,8 @@
 :hidden:
 
 ./how_explore.md
-./how_change.md
 ```
 {% endif %}
-
-
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 ```{toctree}
@@ -26,12 +23,36 @@
 :hidden:
 
 ./historian.md
-./editor.md
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
 ```{include} ./historian.md
 ```
+{% endif %}
+
+<!-- Same for Editor -->
+{% if page %}
+```{include} ./how_change.md
+```
+{% else %}
+<!-- BUILDING THE SLIDES -->
+```{toctree}
+:maxdepth: 2
+:hidden:
+
+./how_change.md
+```
+{% endif %}
+{% if build == "slides" %}
+<!-- BUILDING THE SLIDES -->
+```{toctree}
+:maxdepth: 2
+:hidden:
+
+./editor.md
+```
+{% else %}
+<!-- BUILDING THE PAGES -->
 ```{include} ./editor.md
 ```
 {% endif %}

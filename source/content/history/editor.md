@@ -18,23 +18,22 @@
 ```{include} ./revert.md
 ```
 ::::
-:::{dropdown} `git reset` - How to step back and take a different turn?
+::::{dropdown} `git reset` - How to step back and take a different turn?
 :class-title: reset
 ```{include} ./reset.md
 ```
-:::
-::::{dropdown} `git rebase` - How to consolidate and clean-up?
+::::
+:::{dropdown} `git rebase` - How to consolidate and clean-up?
 :class-title: reset
 ```{include} ./rebase.md
 ```
-::::
+:::
 ::::{dropdown} `git-filter-repo` - How to remove sensitive data?
 :class-title: log
 ```{include} ./git_filter_repo.md
 ```
 ::::
-::::{dropdown} Altering the history
-:color: warning
+::::{dropdown} When is it fine to change history?
 :class-title: log
 ```{include} ./altering_history.md
 ```

@@ -51,5 +51,3 @@ A ── B ── C ── F        (new tip after the new commit)
 :::
 ::::
 :::::
-
-:::::

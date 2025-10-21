@@ -5,5 +5,4 @@
 - How to consolidate and clean-up?
 - How to remove sensitive data?
 - When is it fine to change history?
-- How does an altered history affect collaboration?
 {% if page %}:::{% endif %}

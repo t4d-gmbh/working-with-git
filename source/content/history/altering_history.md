@@ -3,6 +3,52 @@
 {% endif %}
 
 {% if page %}
+**When to Rewrite Git History**
+
+Rewriting Git history generally **undermines Git's ability to help you collaborate, maintain a reproducible record, and effectively track/debug changes**.
+For this reason, it's often best to avoid it.
+
+**When It May Be Necessary**
+
+Sometimes, you need to change history for a critical reason, such as **removing sensitive data**.
+In these specific cases, altering history might be acceptable because the benefit outweighs the cost of not acting.
+
+**A Simple Guideline**
+
+A good rule of thumb is to ask: **Is the history you're changing already shared?**
+
+* **Local History Only:** It's usually **fine** to modify history that **only exists on your local machine** (e.g., squashing commits, rewriting commit messages, or rebasing an unpublished branch).
+  When you push, this revised history will be the only version shared, preventing conflicts.
+
+* **Shared History:** **Avoid** modifying history that has **already been pushed to a remote repository**.
+  This requires a **force push** and creates a situation where different copies of the project have conflicting histories, which breaks the normal collaboration workflow and requires manual coordination to fix.
+
+
+{% endif %}
+
+:::::{admonition} Sensitive data
+:class: warning
+
+::::{grid}
+:::{grid-item-card} Avoid rewriting history:
+It breaks collaboration, reproducibility, and the ability to track changes.
+:::
+:::{grid-item-card} Never change shared history:
+Rewriting history that is already on the remote repository breaks the workflow and requires a **force push** and manual cleanup by collaborators.
+:::
+::::
+
+::::{grid}
+:::{grid-item-card} Exception 1: Critical need:
+It's acceptable for necessary actions like **removing sensitive data**.
+:::
+:::{grid-item-card} Exception 2 _optional_: Local changes only:
+It is generally **fine** to change history that has **not yet been pushed** (e.g., squashing commits on a local branch).
+:::
+::::
+:::::
+
+{% if page %}
 ### When to Use Which Method?
 
 :::::{dropdown} **Decision Guide: Which "go back" method to use?**

@@ -11,7 +11,7 @@ With `git show` allows you to inspect individual objects, like commits, tags or 
 
 :::{card} Example: `git show HEAD~5 -- README.md`
 :class: smaller
-```bash
+```{code-block} diff
 commit 65xxx
 Author: Jonas I. Liechti <j-i-l@t4d.ch>
 Date:   Mon Nov 4 13:43:05 2024 +0100

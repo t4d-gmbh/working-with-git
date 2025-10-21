@@ -4,7 +4,8 @@
 <strong style="color:black">git diff &nbsp;[{octicon}`link-external;0.8em;log`](https://git-scm.com/docs/git-diff)</strong> shows you **what exactly changed** between different files, branches and even repositories. 
 
 {% if page %}
-`git diff` is one of the most essential commands for investigating changes in your Git repository. It shows you **exactly what changed** between different versions of your files.
+`git diff` is one of the most essential commands for investigating changes in your Git repository.
+It reports in a standardized format a set of exact changes between different versions of your files.
 
 ::::{grid}
 :::{grid-item-card} Working Directory vs Staging Area
@@ -40,14 +41,20 @@ Shows changes between any two commits
 :::
 ::::
 
-{% endif %}
+{% endif %} {% if slide %}
 ```{admonition} Create patches:
 :class: tip, margin
 - `git diff > my.patch`
 - `git apply my.patch`
 ```
+```{admonition} Current changes:
+:class: tip, margin
+- `git diff`: Working Dir. vs. Staging
+- `git diff --staged`: Staging vs. HEAD
+```
+{% endif %}
 
-:::::{card} Example: `git diff`:
+:::::{card} Example: `git diff HEAD~2 HEAD`:
 :class: smaller
 
 ```{code-block} diff
