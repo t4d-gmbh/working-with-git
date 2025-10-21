@@ -8,7 +8,7 @@
 <strong>Dr. Matteo Delucchi</strong></p> -->
 :::{admonition} Authors
 :class: note, margin
-Dr. Jonas I. Liechti
+Dr. Jonas I. Liechti  
 Dr. Matteo Delucchi
 :::
 
@@ -19,7 +19,7 @@ Dr. Barbara Mejia
 {% else %}
 ### Authors
 
-**Dr. Jonas I. Liechti**
+**Dr. Jonas I. Liechti**  
 **Dr. Matteo Delucchi**
 
 ### Editors
@@ -27,10 +27,9 @@ Dr. Barbara Mejia
 **Dr. Barbara Mejia**
 {% endif %}
 
-
+### Content
 ```{toctree} 
 :maxdepth: {% if build == "slides" %}1{%else %}4{% endif %}
-:caption: Content
 {% if build == "slides" %}:numbered:{% endif %}
 
 content/intro/index
