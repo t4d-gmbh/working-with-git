@@ -9,7 +9,7 @@ Exchange changes between two repositories
 {% if page %}{% endif %}
 :::
 :::{grid-item-card} Send/Receive changes
-Apply changes from one repository to another
+Apply selected changes from one repository to another
 {% if page %}{% endif %}
 :::
 :::{grid-item-card} Use relative changes

@@ -20,7 +20,7 @@ The relationships between snapshots, including parent-child relationships
 ::::{grid}
 {% endif %}
 :::{grid-item-card} Deltas
-The relationships between snapshots, including parent-child relationships
+Aggregated differences between between snapshots
 {% if page %}
 {% endif %}
 :::
