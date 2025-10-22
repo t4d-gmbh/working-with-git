@@ -8,6 +8,7 @@ This is a selection of commands that can particularly enhance your experience wi
 :maxdepth: 1
 
 ./status
+./checkout
 ./stash
 ./cherry_pick
 ```
@@ -16,6 +17,11 @@ This is a selection of commands that can particularly enhance your experience wi
 
 ::::{dropdown} git status &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-status)
 ```{include} ./status.md
+:start-after: <!-- pages-include -->
+```
+::::
+::::{dropdown} git checkout &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-checkout)
+```{include} ./checkout.md
 :start-after: <!-- pages-include -->
 ```
 ::::

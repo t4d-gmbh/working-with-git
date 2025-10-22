@@ -1,8 +1,16 @@
 {% if slide %}
 ### <i class="fas fa-hat-wizard"></i> HEAD
+
+```{admonition} Point to another branch: 
+:class: tip, margin
+
+`git checkout <branch>`
+
+```
 {% else %}
 
 :::{card} <i class="fas fa-hat-wizard"></i> HEAD
+
 {% endif %}
 
 > In <i class="fab fa-git"></i> **HEAD corresponds{% if page %}[^sn7]{% endif %} to the currently checked out branch**.
