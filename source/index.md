@@ -14,7 +14,7 @@ Dr. Matteo Delucchi
 
 :::{admonition} Editors
 :class: note, margin
-Dr. Barbara Mejia
+Barbara Mejia
 :::
 {% else %}
 ### Authors
@@ -24,13 +24,12 @@ Dr. Barbara Mejia
 
 ### Editors
 
-**Dr. Barbara Mejia**
+**Barbara Mejia**
 {% endif %}
 
-
+### Content
 ```{toctree} 
 :maxdepth: {% if build == "slides" %}1{%else %}4{% endif %}
-:caption: Content
 {% if build == "slides" %}:numbered:{% endif %}
 
 content/intro/index
