@@ -4,6 +4,7 @@
 
 intro/index
 elements/index
+gitignore/index
 commands/index
 update_cycle/index
 history/index
