@@ -1284,9 +1284,9 @@ AWS_LOCATION=static
 # ==========================================
 
 # Stripe (NEVER commit real API keys!)
-STRIPE_SECRET_KEY=sk_test_51ABCDEF1234567890abcdef  # ❌ NEVER commit!
-STRIPE_PUBLISHABLE_KEY=pk_test_51ABCDEF1234567890abcdef
-STRIPE_WEBHOOK_SECRET=whsec_ABCDEF1234567890abcdef  # ❌ NEVER commit!
+STRIPE_SECRET_KEY=sk_test_123  # ❌ NEVER commit!
+STRIPE_PUBLISHABLE_KEY=pk_test_123
+STRIPE_WEBHOOK_SECRET=whsec_123  # ❌ NEVER commit!
 
 # PayPal
 PAYPAL_CLIENT_ID=AbcDef1234567890XyZ
