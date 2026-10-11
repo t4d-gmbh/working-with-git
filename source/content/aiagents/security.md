@@ -1,99 +1,55 @@
-# Security Considerations for AI Configurations: An In-Depth Analysis
+# Security Considerations for AI Configurations
 
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 
-:::{admonition} Critical Security Principle
-:class: danger
-**Never commit secrets, API keys, or credentials to Git.**
+:::{admonition} Critical Rule
+:class: danger, margin
+**NEVER commit secrets, API keys, or credentials to Git!**
 :::
 
-## The Security Landscape
-
-- Sensitive data exposure risks
-- Historical access to secrets
-- Fork and clone vulnerabilities
-- Third-party repository access
-
----
-
-## Risk Assessment
-
-### High-Risk Scenarios
-- API keys in configuration files
-- Credentials in environment files
-- Tokens in source code
-- Secrets in commit history
-
-### Medium-Risk Scenarios
-- Personal preferences with embedded secrets
-- Project configurations with hardcoded values
-- Shared templates with placeholders
-
-### Low-Risk Scenarios
-- Public documentation
+::::{grid}
+:::{grid-item-card} High Risk
+- API keys in configs
+- Credentials in .env
+- Tokens in code
+- Secrets in history
+:::
+:::{grid-item-card} Medium Risk
+- Personal prefs
+- Hardcoded values
+- Shared templates
+:::
+:::{grid-item-card} Low Risk
+- Public docs
 - Non-sensitive defaults
-- Open-source configurations
+- Open-source configs
+:::
+::::
 
----
+:::{admonition} Prevention
+:class: note, margin
+Use .gitignore, env vars, secret managers
+:::
 
-## Prevention Strategies
-
-### Secret Management Alternatives
-- Environment variables
-- Secret management services
-- Configuration files (excluded from Git)
-- Encrypted storage
-
----
-
-## Detection Methods
-
-### Git Hosting Platforms
-- GitHub Secret Scanning
-- GitLab Secret Detection
-- Bitbucket Security
-
-### Open Source Tools
+::::{grid}
+:::{grid-item-card} Detection
+- GitHub/GitLab scanning
 - TruffleHog
 - Gitleaks
-- Git-secrets
 - Detect-secrets
+:::
+:::{grid-item-card} Response
+- Rotate immediately
+- Remove from history
+- Notify team
+- Document incident
+:::
+::::
 
----
+<!-- BUILDING THE PAGES -->
 
-## Response Procedures
-
-### Immediate Actions
-1. Rotate exposed secrets **immediately**
-2. Remove from Git history
-3. Notify affected parties
-4. Document the incident
-
-### History Rewriting
-- `git filter-repo` for history cleanup
-- Force push (with caution)
-- Verify cleanup completeness
-
-### Prevention for Future
-- Add to .gitignore
-- Set up pre-commit hooks
-- Enable secret scanning
-- Educate team members
-
----
-
-## Best Practices
-
-### The Principle of Least Privilege
-- Minimal access for AI tools
-- Restrict by default, enable as needed
-- Regular access reviews
-
-### Defense in Depth
-- Multiple layers of protection
-- Pre-commit + server-side scanning
-- Manual reviews for sensitive changes
+Security is paramount when dealing with AI agent configurations.
 
 {% else %}
 <!-- BUILDING THE PAGES -->

@@ -19,10 +19,18 @@ What should you track in Git when it comes to AI agent configuration files?
 ./ai_generated_content
 ```
 
+:::{admonition} Summary
+:class: note
+- Identify config file types
+- Organize by level (org/user/project)
+- NEVER commit secrets
+- Track project-specific, non-sensitive files
+:::
+
 {% else %}
 <!-- BUILDING THE PAGES -->
 
-AI agents allows developers to leverage AI assistants effectively, but **proper configuration file management** is essential for security and collaboration.
+<i class="fas fa-cog"></i> allows developers to leverage AI assistants effectively, but **proper configuration file management** is essential for security and collaboration.
 
 AI agents like Claude, Vibe, and Copilot rely on configuration files that define their behavior. The key challenge is determining **which files to track in version control** and which to keep local or secret.
 

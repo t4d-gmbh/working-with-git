@@ -3,50 +3,55 @@
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 
-## The Three Levels of Configuration
+:::{admonition} Key Principle
+:class: tip, margin
+Configuration files belong at different levels: organization, user, or project.
+:::
 
-### Organization/Server Level
-- Shared across all projects
-- Default configurations
-- Security policies
+::::{grid}
+:::{grid-item-card} Organization Level
+Shared across all projects  
+Default configurations  
+Security policies
+:::
+:::{grid-item-card} User Level
+Personal preferences  
+Machine-specific settings  
+API keys (NEVER commit!)
+:::
+:::{grid-item-card} Project Level
+Project-specific settings  
+Team agreements  
+AGENTS.md
+:::
+::::
 
-### User Level
-- Personal preferences
-- Machine-specific settings
-- Local overrides
-
-### Project Level
-- Project-specific settings
-- Team agreements
-- Build configurations
-
----
-
-## Cross-Project Strategies
-
-- Shared configuration repository
-- Git submodules
-- Package managers
-- Symlinks and templates
-- Configuration inheritance
-
----
-
-## Key Question
-
+:::{admonition} Cross-Project Question
+:class: note, margin
 What belongs at each level?
+:::
 
----
+::::{grid}
+:::{grid-item-card} Central Repository
+- Shared configs
+- Version controlled
+- Easy updates
+:::
+:::{grid-item-card} Package Manager
+- Publish as packages
+- Versioned releases
+- Dependency management
+:::
+:::{grid-item-card} Symlinks
+- Local shared directory
+- Immediate updates
+- Machine-specific
+:::
+::::
 
-## Comparison: Organization vs User vs Project
+<!-- BUILDING THE PAGES -->
 
-| Aspect | Organization | User | Project |
-|--------|--------------|------|---------|
-| Scope | All projects | Single user | Single project |
-| Sharing | Team/Org | Personal | Team |
-| Examples | Defaults, policies | API keys, prefs | AGENTS.md, settings |
-| Version Control | Yes (org repo) | No | Yes |
-| Priority | Lowest | Medium | Highest |
+When managing AI agent configurations across multiple projects and team members, a hierarchical approach provides clarity, consistency, and maintainability.
 
 {% else %}
 <!-- BUILDING THE PAGES -->

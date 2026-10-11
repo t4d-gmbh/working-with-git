@@ -3,57 +3,34 @@
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 
-## The Challenge
+:::{admonition} The Challenge
+:class: tip, margin
+AI agents create code, docs, tests. How do we version control it?
+:::
 
-AI agents are increasingly contributing to codebases, raising questions:
-- How do we track AI-generated code?
-- How do we attribute it?
-- What are the legal considerations?
-
----
-
-## Why This Matters
-
-- **Accountability**: Who is responsible for AI-generated code?
-- **Quality**: How do we ensure AI output meets standards?
-- **Legal**: What are the licensing and copyright implications?
-- **Maintainability**: How do we track changes over time?
-
----
-
-## Attribution and Provenance
-
+::::{grid}
+:::{grid-item-card} Why It Matters
+- Accountability
+- Quality standards
+- Legal considerations
+- Maintainability
+:::
+:::{grid-item-card} Key Actions
 - Clear commit messages
-- Documentation of AI usage
-- Tracking which tool generated what
-- Version history
+- Human oversight
+- Document AI usage
+- Team policies
+:::
+::::
 
----
+:::{admonition} Best Practice
+:class: note, margin
+Treat AI-generated code like human-written code.
+:::
 
-## Review Processes
+<!-- BUILDING THE PAGES -->
 
-- Human oversight required
-- Code review standards for AI output
-- Testing requirements
-- Approval workflows
-
----
-
-## Legal and Licensing
-
-- License compatibility
-- Copyright considerations
-- Data privacy concerns
-- Compliance requirements
-
----
-
-## Best Practices
-
-- Treat AI code like human code
-- Maintain human oversight
-- Document AI tool usage
-- Establish team policies
+As AI agents become more sophisticated and integrated into development workflows, they are increasingly generating code, documentation, and other artifacts that end up in version control systems.
 
 {% else %}
 <!-- BUILDING THE PAGES -->

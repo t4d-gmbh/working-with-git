@@ -3,45 +3,33 @@
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
 
-## What Are AI Agent Configuration Files?
+:::{admonition} Core Concept
+:class: tip, margin
+Configuration files define how AI assistants interact with your codebase.
+:::
 
-Files that define how AI assistants behave and interact with your codebase.
+::::{grid}
+:::{grid-item-card} Project Instructions
+- AGENTS.md
+- CLAUDE.md
+- Project-specific context
+:::
+:::{grid-item-card} Framework Configs
+- .vibe/config
+- .claude/config
+- Tool-specific settings
+:::
+:::{grid-item-card} Environment & Ignore
+- .env (keep secret!)
+- .aiignore
+- Local overrides
+:::
+::::
 
----
-
-## Common Configuration File Types
-
-### Project-Level Files
-- **AGENTS.md**: Team instructions and project context
-- **CLAUDE.md**: Project-specific Claude directives
-
-### Framework-Specific Files
-- **.vibe/config**: Vibe CLI configuration
-- **.claude/config**: Claude Code settings
-- **.cursor/config**: Cursor editor settings
-
-### Environment Files
-- **.env**: Environment variables (often contains secrets)
-- **config.json**: JSON-based configuration
-- **.aiignore**: AI-specific ignore patterns
-
----
-
-## File Lifecycle
-
-1. **Creation**: Initial setup with defaults
-2. **Customization**: Tailored to project/team needs
-3. **Sharing**: Distributed to team members
-4. **Evolution**: Updated as requirements change
-
----
-
-## Key Questions to Ask
-
-- What does this file control?
-- Who needs access to it?
-- Does it contain sensitive data?
-- How often does it change?
+:::{admonition} Key Question
+:class: note, margin
+What does this file control and who needs it?
+:::
 
 {% else %}
 <!-- BUILDING THE PAGES -->
