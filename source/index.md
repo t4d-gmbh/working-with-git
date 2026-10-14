@@ -42,4 +42,5 @@ content/feature_branch/index
 content/versioning/index
 content/useful_commands/index
 content/exercise/index
+content/aiagents/index
 ```
