@@ -1,29 +1,40 @@
 {% if build == "slides" %}
 <!-- BUILDING THE SLIDES -->
+# Purpose and Principles of `AGENTS.md`
 
-:::{admonition} Core Question
+:::{admonition} The Core Purpose
 :class: tip, margin
-How do you tell an AI what matters in YOUR project?
+AGENTS.md tells AI what matters in YOUR project.
 :::
 
 ::::{grid}
-:::{grid-item-card} Purpose
-Tell AI what is important
+:::{grid-item-card}
+<i class="fas fa-lightbulb"></i> **Think Before Coding**
+State assumptions, surface tradeoffs
 :::
-:::{grid-item-card} Philosophy
-Project principles first
+:::{grid-item-card}
+<i class="fas fa-minus-circle"></i> **Simplicity First**
+Minimum code, no speculation
 :::
-:::{grid-item-card} Practice
-Workflow integration
+:::{grid-item-card}
+<i class="fas fa-scalpel"></i> **Surgical Changes**
+Touch only what's necessary
 :::
+:::{grid-item-card}
+<i class="fas fa-bullseye"></i> **Goal-Driven**
+Define success, loop until verified
 ::::
+
+:::{admonition} What Belongs?
+:class: note
+Project philosophy → Principles → Workflow → Constraints → Tool integration
+:::
 
 {% else %}
 <!-- BUILDING THE PAGES -->
 
 The `AGENTS.md` file is a **manifesto** of how AI should interact with your codebase. It transforms AI from a generic tool into a project-aware collaborator that understands your team's values, standards, and constraints.
 
-{% endif %}
 
 ## The Fundamental Aim
 
@@ -188,12 +199,4 @@ For completeness, other AI tools have their own project-level configuration file
 
 However, `AGENTS.md` is emerging as the **standard** for project-level AI guidance across multiple tools. When possible, use `AGENTS.md` for maximum compatibility and maintain a single source of truth for your project's AI guidance.
 ::::
-
-{% if build == "slides" %}
-
-:::{admonition} Slide Summary
-:class: note
-`AGENTS.md` = Project philosophy + Karpathy's principles + Practical constraints + Security awareness
-:::
-
 {% endif %}
