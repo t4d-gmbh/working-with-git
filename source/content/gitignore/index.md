@@ -10,6 +10,7 @@
 ./syntax
 ./best_practices
 ./debugging
+./debugging_patterns
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->

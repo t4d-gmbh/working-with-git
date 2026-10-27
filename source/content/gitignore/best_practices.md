@@ -30,6 +30,20 @@ The global ignore file is a **personal security safety net** to help avoid
 accidentally adding credential files across your projects. It remains local to
 your machine: collaborators do not receive it when they clone a repository.
 
+Although the global ignore file is stored outside your repositories, its
+patterns are interpreted relative to **each repository’s working-tree root**,
+not relative to the directory containing the global ignore file.
+
+For example, in `~/.config/git/ignore`:
+
+- `/.secrets/` matches a `.secrets` directory directly at each repository’s
+  working-tree root.
+- `.secrets/` matches directories named `.secrets` at any depth within each
+  repository.
+
+The leading `/` anchors the pattern to the repository’s working-tree root;
+it does **not** refer to the operating system’s filesystem root.
+
 **A global ignore file does not replace a repository-specific `.gitignore`.**
 Commit and track the project’s `.gitignore` so every collaborator receives its
 shared exclusions when cloning. Project-specific build outputs, dependencies,
@@ -149,10 +163,11 @@ Some files should be ignored in development but are needed in production:
 # Development only - ignore
 .env
 dev-config.json
-
-# Production only - DON'T ignore
-config/production.json
 ```
+
+Keep non-sensitive shared configuration such as `config/production.json`
+versioned rather than listing it as an ignore pattern. A comment saying
+"DON'T ignore" does not change the meaning of the pattern on the following line.
 
 #### Personal vs. Shared Configuration
 

@@ -9,30 +9,52 @@
 The `.gitignore` file uses **glob patterns** to match files and directories.
 These patterns are similar to, but not exactly the same as, regular expressions.
 
+**Pattern scope starts at the directory containing this `.gitignore`.**
+
+{% if page %}
+Patterns in a repository `.gitignore` apply to that directory and its descendants.
+A leading `/` anchors a match directly there; it does not mean the operating system’s filesystem root.
+A slash in the middle also anchors the pattern: `output/build/` matches that path
+beside the `.gitignore`, not `nested/output/build/`.
+
+Without a slash other than an optional trailing `/`, a pattern matches names at
+any depth within this scope. The trailing `/` restricts matches to directories.
+Do not prefix patterns with `./`: `.gitignore` patterns are not normalised like shell paths.
+Paths shown in the examples below are relative to the directory containing the `.gitignore`.
+{% endif %}
+
 ### Basic Pattern Rules
 
 {% if page %}
 #### Matching Files
 {% endif %}
 
-::::{grid}
+{% if page %}
+::::{grid} 2
+{% else %}
+::::{grid} 4
+{% endif %}
 :::{grid-item-card} `*.log`
-Matches all files ending with `.log` in **any directory**
+Matches names ending with `.log` beside this `.gitignore` or in its descendants.
 
 `error.log`, `debug.log`, `logs/app.log`
 :::
 :::{grid-item-card} `temp.txt`
-Matches the file `temp.txt` in the **current directory only**
+Matches the name `temp.txt` beside this `.gitignore` or in its descendants.
 
-`./temp.txt` ✅, `subdir/temp.txt` ❌
+`temp.txt` ✅, `subdir/temp.txt` ✅
+
+{% if page %}
+Use `/temp.txt` to match only directly beside the `.gitignore`.
+{% endif %}
 :::
 :::{grid-item-card} `/build/`
-Matches the `build` directory **only in the root**
+Matches a directory named `build` **directly beside this `.gitignore`**, not deeper down.
 
-`/build/` ✅, `src/build/` ❌
+`build/` ✅, `src/build/` ❌
 :::
 :::{grid-item-card} `build/`
-Matches **any directory** named `build` at any level
+Matches directories named `build` at any depth **within this `.gitignore`’s scope**.
 
 `build/`, `src/build/`, `docs/build/` ✅
 :::
@@ -41,20 +63,23 @@ Matches **any directory** named `build` at any level
 {% if page %}
 #### Matching Directories
 
-To match a directory, end your pattern with a forward slash `/`:
+To match only directories, end your pattern with a forward slash `/`.
+Without it, `build` can match either a file or a directory named `build`.
 
-```bash
-# Ignore all directories named node_modules
+```text
+# Ignore directories named node_modules beside this .gitignore or below it
 node_modules/
 
-# Ignore only the root node_modules directory
+# Ignore only node_modules directly beside this .gitignore
 /node_modules/
 ```
 
 ### Negation Patterns
 
-Prefix a pattern with `!` to **exclude** it from being ignored.
-Negation patterns override previous ignore patterns.
+Prefix a pattern with `!` to cancel an earlier exclusion for a matching path.
+This makes an untracked path eligible for adding; it does not track it automatically.
+An exception cannot reach a file inside an excluded parent directory: Git must
+be allowed to traverse every parent first.
 
 {% endif %}
 
@@ -64,14 +89,16 @@ Negation patterns override previous ignore patterns.
 *.log
 !important.log
 ```
-Ignores all `.log` files **except** `important.log`
+Ignores `.log` names within scope, except names exactly `important.log`, including in descendants.
 :::
 :::{grid-item-card} Negate a Directory
 ```
-*
-!src/
+/*
+!/.gitignore
+!/src/
 ```
-Ignores everything **except** the `src/` directory
+Ignores other entries directly beside this `.gitignore`, but keeps the ignore
+file itself and files under `src/` eligible for adding.
 :::
 :::{grid-item-card} Complex Negation
 ```
@@ -86,19 +113,35 @@ Ignores all `.js` files except test files and `config.js`
 {% if page %}
 #### Order Matters
 
-`.gitignore` processes patterns **from top to bottom**.
-The last matching pattern wins:
+Within one `.gitignore`, the last matching pattern determines the result,
+provided an excluded parent directory has not already prevented traversal.
 
-```
-# This works: ignore everything in docs/ except README.md
+```text
+# This works: ignore the contents of docs/ except its README.md
 docs/*
 !docs/README.md
+```
 
-# This doesn't work (README.md is ignored by * first, then un-ignored, but too late)
+This does not work, even though the exception comes last:
+
+```text
 *
 !docs/README.md
-docs/*
 ```
+
+Here `*` excludes the `docs` directory itself. Allow Git to traverse it before
+excluding its contents and making the file exception:
+
+```text
+*
+!docs/
+docs/*
+!docs/README.md
+```
+
+Similarly, `*` followed by `!src/` allows traversal into `src`, but `*` still
+ignores its files and other child directories. Git does not track empty
+directories: allowing traversal is different from making files eligible for adding.
 
 ### Special Characters
 
@@ -108,6 +151,8 @@ Lines starting with `#` are comments and are ignored:
 # This is a comment
 *.log
 ```
+Explanations must be on separate comment lines; a trailing `# explanation`
+is part of the pattern, not an inline comment.
 :::
 
 :::{dropdown} Escaping Special Characters
@@ -120,7 +165,8 @@ To match a file starting with `!`, escape it with `\`:
 :::{dropdown} Character Classes
 Use `[abc]` to match any single character in the brackets:
 ```
-file[0-9].txt  # Matches file0.txt, file1.txt, ..., file9.txt
+# Matches file0.txt, file1.txt, ..., file9.txt
+file[0-9].txt
 ```
 :::
 
@@ -132,21 +178,29 @@ You can place `.gitignore` files in **subdirectories** to apply ignore rules loc
 my-project/
 ├── .gitignore          # Root ignore rules
 ├── src/
-│   ├── .gitignore      # Ignores files only in src/
+│   ├── .gitignore      # Rules for src/ and its descendants
 │   └── temp.txt
 └── docs/
-    └── .gitignore      # Ignores files only in docs/
+    └── .gitignore      # Rules for docs/ and its descendants
 ```
 
-A file in `src/temp.txt` will be ignored by **both** the root `.gitignore` and `src/.gitignore`.
+Both the repository-root `.gitignore` and `src/.gitignore` can supply rules for
+`src/temp.txt`. **Nested rules take precedence** over matching parent rules;
+whether a file is ignored depends on the actual patterns, not just the presence
+of these files.
+
+For example, `temp.txt` in the repository-root `.gitignore` excludes matching
+names throughout its scope. An exception `!temp.txt` in `src/.gitignore` makes
+`src/temp.txt` and `src/deep/temp.txt` eligible for adding, provided their parent
+directories are not excluded. Files outside `src/` are unaffected by that exception.
 
 ### Platform Considerations
 
 ::::{grid}
 :::{grid-item-card} Case Sensitivity
-Git is case-sensitive by default.
-On macOS and Linux, `File.txt` ≠ `file.txt`.
-On Windows, they're the same.
+Case sensitivity depends on `core.ignoreCase` and the filesystem, not just the OS.
+With `core.ignoreCase=false`, `File.txt` and `file.txt` match differently;
+with it enabled, an ignore pattern can match both spellings.
 
 For cross-platform compatibility, list both:
 ```
@@ -155,8 +209,8 @@ thumbs.db
 ```
 :::
 :::{grid-item-card} Line Endings
-Pattern matching is based on the **file content**, not line endings.
-However, be aware that line endings can affect pattern matching in edge cases.
+Patterns match candidate paths, not the contents of candidate files.
+Git accepts ordinary LF and CRLF line endings in `.gitignore`.
 :::
 ::::
 
@@ -230,6 +284,10 @@ coverage.xml
 .Rproj.user/
 .Rhistory
 ```
+Patterns such as `.Rmd` and `.Rproj` above are **literal names**, not extension
+patterns: they do not match `analysis.Rmd` or `project.Rproj`. An extension
+pattern would require a wildcard, but source documents and shared project
+configuration should normally remain versioned.
 :::
 :::{tab} LaTeX
 ```

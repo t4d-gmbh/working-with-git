@@ -6,8 +6,8 @@
 ## What is .gitignore?
 {% endif %}
 
-A `.gitignore` file is a **text file** that tells <i class="fab fa-git"></i> which files or directories to **ignore** in your repository.
-It prevents these files from being tracked by version control, keeping your repository clean and focused on what matters.
+A `.gitignore` file is a **text file** that tells <i class="fab fa-git"></i> which untracked paths to omit from normal status listings and additions.
+It helps prevent accidental additions; it does not stop tracking files already in the index or prevent a forced add.
 
 {% if slide %}
 ### Why is it Useful?
@@ -16,8 +16,8 @@ It prevents these files from being tracked by version control, keeping your repo
 {% endif %}
 
 {% if page %}
-Git, by default, wants to track **every file** in your working directory.
-This includes:
+Without ignore rules, Git normally reports untracked files, and `git add .`
+can stage them for tracking. These may include:
 {% endif %}
 
 ::::{grid}
