@@ -1,5 +1,8 @@
 {% if slide %}
-###  3{octicon}`sync;0.8em`/ 1{octicon}`sync;0.8em` - `rebase`
+```{include} ./_status_heading_style.inc
+```
+
+### <span class="update-cycle-status">3{octicon}`sync;0.8em`/ 1{octicon}`sync;0.8em` - `rebase`</span>
 {% endif %}
 
 {% if slide %}

@@ -26,7 +26,7 @@ A good rule of thumb is to ask: **Is the history you're changing already shared?
 
 {% endif %}
 
-:::::{admonition} Sensitive data
+:::::{admonition} Rewriting history: risks and exceptions
 :class: warning
 
 ::::{grid}
@@ -194,4 +194,3 @@ Sometimes you make a mistake with history manipulation. Git has safety nets:
 ::::
 
 {% endif %}
-
