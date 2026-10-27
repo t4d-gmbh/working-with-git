@@ -11,7 +11,19 @@
 
 {% if build == "slides" %}
 <div class="slide-frame">
-  <div id='rescaled-text'>
+  <div id='rescaled-text'{% if pagename in [
+    "content/update_cycle/0_1",
+    "content/update_cycle/0_2",
+    "content/update_cycle/0_3",
+    "content/update_cycle/1__0",
+    "content/update_cycle/2__0",
+    "content/update_cycle/2_3__0_1",
+    "content/update_cycle/3__0_2",
+    "content/update_cycle/3__0_3",
+    "content/update_cycle/3__1",
+    "content/update_cycle/3__0_3_rebase",
+    "content/update_cycle/3__1_rebase",
+  ] %} class="cycle-status-slide"{% endif %}>
     {{ body }}
   </div>
 </div>

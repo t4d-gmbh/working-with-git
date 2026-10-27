@@ -54,6 +54,11 @@ div.margin {
   font-size: max(1.5vh, 0.9vw) !important;
 }
 
+/* Hide only the main cycle-state heading's prefix, not navigation or subheadings. */
+.cycle-status-slide > section:first-of-type > :is(h1, h2, h3, h4, h5, h6):first-child > .section-number {
+  display: none;
+}
+
 .navbar-brand img {
   max-height: 6vh;
   width: auto;

@@ -108,7 +108,8 @@ for (const [name, title] of Object.entries(topics)) {
   });
   test(`${name}: slide cards have balanced, properly nested fences`, () => {
     const slides = selectMode(source, "slides").trim();
-    assert.ok(slides.startsWith(`### ${title}\n`));
+    const slideTitle = name === "debugging" ? "Ignored ≠ untracked" : title;
+    assert.ok(slides.startsWith(`### ${slideTitle}\n`));
     assert.match(slides, /^:{5}\{card\}$/m);
     assert.match(slides, /\n:{5}$/);
     structure(slides);
@@ -165,6 +166,122 @@ test("security guidance leads with a warning and actionable global-ignore setup"
   assert.doesNotMatch(pages, /### Global vs\. Local \.gitignore/);
 });
 
+test("global-ignore anchoring is explained in pages without expanding slides", () => {
+  const source = readFileSync(join(directory, "best_practices.md"), "utf8");
+  const pages = selectMode(source, "pages");
+  const slides = selectMode(source, "slides");
+  assert.match(pages, /relative to \*\*each repository’s working-tree root\*\*/);
+  assert.match(pages, /not relative to the directory containing the global ignore file/);
+  assert.match(pages, /`\/\.secrets\/`/);
+  assert.match(pages, /`\.secrets\/`/);
+  assert.doesNotMatch(slides, /working-tree root|`\/\.secrets\/`/);
+});
+
+test("matching-file cards use two columns in pages and four in slides", () => {
+  const source = readFileSync(join(directory, "syntax.md"), "utf8");
+  for (const [mode, columns] of [["pages", 2], ["slides", 4]]) {
+    const text = selectMode(source, mode);
+    const grid = text.match(/^::::\{grid\}([^\n]*)\n([\s\S]*?)^::::$/m);
+    assert.ok(grid, mode);
+    assert.equal(grid[1].trim(), String(columns), mode);
+    assert.deepEqual(
+      [...grid[2].matchAll(/^:::\{grid-item-card\} (.*)$/gm)].map(match => match[1]),
+      ["`*.log`", "`temp.txt`", "`/build/`", "`build/`"],
+    );
+    structure(text);
+  }
+});
+
+test("local pattern guidance states its scope and uses a working tree exception", () => {
+  const source = readFileSync(join(directory, "syntax.md"), "utf8");
+  const pages = selectMode(source, "pages");
+  assert.match(pages, /directory containing (?:this|the) `\.gitignore`/);
+  assert.match(pages, /operating system’s filesystem root/);
+  assert.doesNotMatch(pages, /current directory only|ignored by \*\*both\*\*/);
+  const directoryExample = pages.slice(pages.indexOf("{grid-item-card} Negate a Directory"));
+  const patterns = directoryExample.match(/```(?:text)?\n([\s\S]*?)\n```/);
+  assert.ok(patterns);
+  assert.equal(patterns[1], "/*\n!/.gitignore\n!/src/");
+  const characterExample = pages.slice(pages.indexOf("{dropdown} Character Classes"));
+  const characterPatterns = characterExample.match(/```(?:text)?\n([\s\S]*?)\n```/);
+  assert.ok(characterPatterns);
+  assert.ok(characterPatterns[1].split("\n").includes("file[0-9].txt"));
+});
+
+test("diagnostics use supported flags and distinguish ignored from untracked files", () => {
+  const source = readFileSync(join(directory, "debugging.md"), "utf8");
+  assert.doesNotMatch(source, /--debug|Use absolute paths/);
+  assert.match(source, /git status --porcelain --ignored/);
+  assert.match(source, /List untracked, non-ignored files/);
+  assert.match(source, /Uncommitted `\.gitignore` files work locally/);
+  assert.match(source, /# !! \.env/);
+});
+
+test("debugging slides have one main command each and no reference-page material", () => {
+  const expected = [
+    ["debugging.md", "Ignored ≠ untracked", "git rm --cached file.txt"],
+    ["debugging_patterns.md", "Why is this file ignored?", "git check-ignore -v logs/debug.log"],
+  ];
+  for (const [file, title, command] of expected) {
+    const slides = selectMode(readFileSync(join(directory, file), "utf8"), "slides").trim();
+    assert.deepEqual(
+      structure(slides).map(({ level, text, inCard }) => ({ level, text, inCard })),
+      [{ level: 3, text: title, inCard: false }],
+    );
+    assert.equal((slides.match(/^:{5}\{card\}$/gm) || []).length, 1);
+    const commands = [...slides.matchAll(/```bash\n([\s\S]*?)\n```/g)];
+    assert.equal(commands.length, 1);
+    assert.equal(commands[0][1], command);
+    assert.ok(slides.split(/\s+/).length <= 90, `${file}: keep slide copy brief`);
+    assert.doesNotMatch(slides, /Self-Assessment|Troubleshooting|Common Mistakes|git status|git ls-files|--no-index|\{dropdown\}|\{grid\}/);
+  }
+  const tracked = selectMode(readFileSync(join(directory, "debugging.md"), "utf8"), "slides");
+  assert.match(tracked, /already tracked/);
+  assert.match(tracked, /local file/);
+  assert.match(tracked, /history/);
+  const patterns = selectMode(readFileSync(join(directory, "debugging_patterns.md"), "utf8"), "slides");
+  assert.match(patterns, /\.gitignore:3:\*\.log\s+logs\/debug\.log/);
+  assert.match(patterns, /source file.*line.*pattern/);
+  assert.match(patterns, /`!`.*exception/);
+});
+
+test("the second debugging slide is navigable while the complete reference stays page-only", () => {
+  const index = readFileSync(join(directory, "index.md"), "utf8");
+  const slides = selectMode(index, "slides");
+  assert.match(slides, /\.\/debugging\n\.\/debugging_patterns\n/);
+  assert.doesNotMatch(selectMode(index, "pages"), /debugging_patterns/);
+  const pages = selectMode(readFileSync(join(directory, "debugging.md"), "utf8"), "pages");
+  for (const heading of ["The Tracked Files Problem", "Common Mistakes & Gotchas", "Debugging Tools", "Self-Assessment Questions", "Troubleshooting Guide"]) {
+    assert.ok(pages.includes(`### ${heading}`), heading);
+  }
+  assert.match(pages, /git check-ignore -v --no-index/);
+  assert.match(pages, /git status --porcelain --ignored/);
+  assert.match(pages, /git ls-files --others --ignored --exclude-standard/);
+  assert.equal((pages.match(/\{dropdown\} Question /g) || []).length, 5);
+  assert.doesNotMatch(pages, /Ignored ≠ untracked|Why is this file ignored\?/);
+});
+
+test("common-mistake cards form three rows of two in pages and stay off slides", () => {
+  const source = readFileSync(join(directory, "debugging.md"), "utf8");
+  const pages = selectMode(source, "pages");
+  const section = pages.slice(pages.indexOf("### Common Mistakes & Gotchas"));
+  const grid = section.match(/^::::\{grid\}([^\n]*)\n([\s\S]*?)^::::$/m);
+  assert.ok(grid);
+  assert.equal(grid[1].trim(), "2");
+  assert.equal((grid[2].match(/^:::\{grid-item-card\}/gm) || []).length, 6);
+  assert.doesNotMatch(selectMode(source, "slides"), /Common Mistakes & Gotchas|\{grid-item-card\}/);
+  structure(pages);
+});
+
+test("the production example does not accidentally ignore production configuration", () => {
+  const source = readFileSync(join(directory, "best_practices.md"), "utf8");
+  const section = source.slice(source.indexOf("#### Development vs. Production"));
+  const patterns = section.match(/```(?:text)?\n([\s\S]*?)\n```/);
+  assert.ok(patterns);
+  assert.ok(!patterns[1].split("\n").includes("config/production.json"));
+  assert.match(section, /`config\/production\.json`/);
+});
+
 test("documented global-ignore commands and example patterns work with Git", () => {
   const source = readFileSync(join(directory, "best_practices.md"), "utf8");
   const setup = selectMode(source, "slides").match(/```bash\n([\s\S]*?)\n```/);
@@ -195,7 +312,7 @@ test("documented global-ignore commands and example patterns work with Git", () 
     for (const [ignored, paths] of [
       [true, [
         ".env", "nested/.env.local", "credentials.local.json",
-        ".secrets/token", "keys/id_rsa", "keys/id_ed25519",
+        ".secrets/token", "nested/.secrets/token", "keys/id_rsa", "keys/id_ed25519",
       ]],
       [false, [
         ".env.example", "nested/.env.example", ".env.template",
@@ -211,6 +328,13 @@ test("documented global-ignore commands and example patterns work with Git", () 
         });
         assert.equal(result.status, ignored ? 0 : 1, `${path}: ${result.stderr}`);
       }
+    }
+    writeFileSync(ignore, "/.secrets/\n");
+    for (const [path, status] of [[".secrets/token", 0], ["nested/.secrets/token", 1]]) {
+      const result = spawnSync("git", ["check-ignore", "--quiet", path], {
+        cwd: repository, env, encoding: "utf8",
+      });
+      assert.equal(result.status, status, `${path}: ${result.stderr}`);
     }
   } finally {
     rmSync(root, { recursive: true, force: true });
