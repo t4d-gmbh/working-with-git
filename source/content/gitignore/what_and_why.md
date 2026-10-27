@@ -1,13 +1,19 @@
-{% if slide %}### What is .gitignore and Why is it Useful?{% endif %}
+{% if slide %}
+### What is .gitignore?
 
-:::::{card}{% if page %} What is .gitignore and Why is it Useful?{% endif %}
-
+:::::{card}
+{% else %}
 ## What is .gitignore?
+{% endif %}
 
 A `.gitignore` file is a **text file** that tells <i class="fab fa-git"></i> which files or directories to **ignore** in your repository.
 It prevents these files from being tracked by version control, keeping your repository clean and focused on what matters.
 
+{% if slide %}
+### Why is it Useful?
+{% else %}
 ## Why is it Useful?
+{% endif %}
 
 {% if page %}
 Git, by default, wants to track **every file** in your working directory.
@@ -70,4 +76,6 @@ The `.gitignore` file emerged as a simple, declarative solution to this problem,
 | Test files | ⚠️ Maybe | Depends on whether they're hand-written or generated |
 
 {% endif %}
+{% if slide %}
 :::::
+{% endif %}

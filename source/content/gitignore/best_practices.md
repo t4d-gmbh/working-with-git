@@ -1,58 +1,90 @@
-{% if slide %}### Best Practices{% endif %}
+{% if slide %}
+### Best Practices
 
-:::{card}{% if page %} Best Practices{% endif %}
-
-## Security Best Practices
-
-{% if page %}
-**NEVER commit sensitive information to version control.**
-Once committed, it's nearly impossible to completely remove from the repository history.
+:::::{card}
+{% else %}
+## Best Practices
 {% endif %}
 
-:::{dropdown} 🔴 **CRITICAL: Credentials and Secrets**
-**Always ignore files containing:**
+### Security Best Practices
 
-- API keys and tokens
-- Database credentials and connection strings
-- Passwords and usernames
-- Private encryption keys
-- OAuth secrets and client IDs
-- Session tokens and cookies
+**NEVER commit API keys, passwords, private keys, or other credentials.**
+
+**Recommendation: maintain a global ignore file as a personal safety net.**
+Use it for recurring sensitive or local file patterns across your repositories.
+
+Create the file, register it with Git, and then edit it to add your patterns:
+
+```bash
+mkdir -p ~/.config/git
+touch ~/.config/git/ignore
+git config --global core.excludesFile ~/.config/git/ignore
+```
+
+{% if slide %}
+Use global rules for personal protection; **commit project-specific rules in the repository’s `.gitignore`.**
+{% endif %}
 
 {% if page %}
-**Pattern examples:**
-```
-# Environment files
+The global ignore file is a **personal security safety net** to help avoid
+accidentally adding credential files across your projects. It remains local to
+your machine: collaborators do not receive it when they clone a repository.
+
+**A global ignore file does not replace a repository-specific `.gitignore`.**
+Commit and track the project’s `.gitignore` so every collaborator receives its
+shared exclusions when cloning. Project-specific build outputs, dependencies,
+and local configuration paths belong in that tracked file.
+
+**Example contents for `~/.config/git/ignore`:**
+
+```text
+# Local environment files, but keep safe templates available for versioning
 .env
 .env.*
-*.env
+!.env.example
+!.env.template
 
-# Configuration files with secrets
-config.json
-secrets.yml
-credentials.xml
+# Personal credential files and a dedicated secrets directory
+credentials.local.*
+.secrets/
 
-# Key files
-*.pem
-*.key
+# Common private-key filenames, not their public-key counterparts
 id_rsa
-id_rsa.pub
-
-# Token files
-*.token
-*.secret
-.GITHUB_TOKEN
-.NPM_TOKEN
+id_ed25519
 ```
+
+Curate these patterns for your own workflow, and keep templates free of real
+secrets. Personal editor and OS temporary-file patterns can also go in this
+global file; project-specific rules still belong in the repository.
+
+Ignore rules match **file and directory paths, not secret contents**. They do
+not remove already-tracked files, and repository rules or `git add -f` can
+override this safety net. Check staged changes before committing; once exposed,
+credentials must be revoked or rotated, not merely added to an ignore file.
 {% endif %}
 
-**Best Practice:** Use environment variables or secret management services instead of hardcoding credentials.
+:::{dropdown} ✅ DO
+- Maintain a curated global ignore file for recurring personal exclusions.
+- Commit project-specific `.gitignore` files and review their changes in PRs.
+- Keep patterns organised and commented; test them with `git check-ignore -v`.
+- Commit safe configuration templates such as `.env.example`.
+- Inspect staged changes with `git diff --cached` before committing.
+- Use environment variables or secret management services instead of hardcoding credentials.
+:::
+
+:::{dropdown} ❌ DON'T
+- Treat your global ignore file as a substitute for a tracked project `.gitignore`.
+- Expect ignore rules to hide or remove secrets that are already tracked.
+- Blindly bypass ignore rules with `git add -f`.
+- Ignore source code or safe configuration templates.
+- Use broad patterns that hide important files; globally ignoring formats such as `.csv` or `.json` may hide legitimate inputs or test fixtures.
+- Forget to update project rules when adding new file types.
 :::
 
 {% if page %}
-## Project-Specific Patterns
+### Project-Specific Patterns
 
-### IDE and Editor Files
+#### IDE and Editor Files
 
 Different development environments generate different files.
 It's generally safe to ignore these, but coordinate with your team.
@@ -82,54 +114,7 @@ It's generally safe to ignore these, but coordinate with your team.
 :::
 ::::
 
-## Global vs. Local .gitignore
-
-### Global .gitignore
-
-Create a **global** `.gitignore` file for patterns that apply across all your projects:
-
-```bash
-# Create global gitignore
-git config --global core.excludesfile ~/.gitignore_global
-
-# Then edit ~/.gitignore_global
-```
-
-**Good for:**
-- IDE-specific files
-- OS-specific files (`.DS_Store`, `Thumbs.db`)
-- Editor temporary files
-
-### Local .gitignore
-
-Place in **each repository** for project-specific patterns.
-
-**Good for:**
-- Build outputs
-- Local configuration
-- Project dependencies
-
-## Team Coordination
-
-{% endif %}
-
-::::{grid}
-:::{grid-item-card} ✅ DO
-- Commit `.gitignore` to the repository
-- Review `.gitignore` changes in PRs
-- Keep patterns organized and commented
-- Test patterns with `git check-ignore`
-:::
-:::{grid-item-card} ❌ DON'T
-- Use `.gitignore` to hide sensitive files already committed
-- Ignore source code files
-- Use overly broad patterns that might hide important files
-- Forget to update `.gitignore` when adding new file types
-:::
-::::
-
-{% if page %}
-## Common .gitignore Templates
+### Common .gitignore Templates
 
 Instead of writing from scratch, you can use community templates:
 
@@ -154,9 +139,9 @@ npx gitignore
 > visualstudiocode
 ```
 
-## Handling Different Environments
+### Handling Different Environments
 
-### Development vs. Production
+#### Development vs. Production
 
 Some files should be ignored in development but are needed in production:
 
@@ -169,7 +154,7 @@ dev-config.json
 config/production.json
 ```
 
-### Personal vs. Shared Configuration
+#### Personal vs. Shared Configuration
 
 Use a **template pattern**:
 
@@ -190,7 +175,7 @@ cp config_template.json config.json
 # Edit config.json with personal settings
 ```
 
-## Performance Considerations
+### Performance Considerations
 
 - **Pattern complexity**: Simple patterns are faster to evaluate
 - **Directory depth**: Deep `.gitignore` files in many directories can slow down `git status`
@@ -198,4 +183,6 @@ cp config_template.json config.json
 - **Solution**: Use broad patterns at the root when possible, rather than many specific patterns in subdirectories
 
 {% endif %}
-:::
+{% if slide %}
+:::::
+{% endif %}

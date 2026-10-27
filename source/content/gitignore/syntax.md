@@ -1,14 +1,18 @@
-{% if slide %}### Pattern Syntax{% endif %}
+{% if slide %}
+### Pattern Syntax
 
-:::::{card}{% if page %} Pattern Syntax{% endif %}
+:::::{card}
+{% else %}
+## Pattern Syntax
+{% endif %}
 
 The `.gitignore` file uses **glob patterns** to match files and directories.
 These patterns are similar to, but not exactly the same as, regular expressions.
 
-## Basic Pattern Rules
+### Basic Pattern Rules
 
 {% if page %}
-### Matching Files
+#### Matching Files
 {% endif %}
 
 ::::{grid}
@@ -35,7 +39,7 @@ Matches **any directory** named `build` at any level
 ::::
 
 {% if page %}
-### Matching Directories
+#### Matching Directories
 
 To match a directory, end your pattern with a forward slash `/`:
 
@@ -47,7 +51,7 @@ node_modules/
 /node_modules/
 ```
 
-## Negation Patterns
+### Negation Patterns
 
 Prefix a pattern with `!` to **exclude** it from being ignored.
 Negation patterns override previous ignore patterns.
@@ -80,7 +84,7 @@ Ignores all `.js` files except test files and `config.js`
 ::::
 
 {% if page %}
-### Order Matters
+#### Order Matters
 
 `.gitignore` processes patterns **from top to bottom**.
 The last matching pattern wins:
@@ -96,7 +100,7 @@ docs/*
 docs/*
 ```
 
-## Special Characters
+### Special Characters
 
 :::{dropdown} Comments
 Lines starting with `#` are comments and are ignored:
@@ -120,7 +124,7 @@ file[0-9].txt  # Matches file0.txt, file1.txt, ..., file9.txt
 ```
 :::
 
-## Directory-Specific .gitignore Files
+### Directory-Specific .gitignore Files
 
 You can place `.gitignore` files in **subdirectories** to apply ignore rules locally:
 
@@ -136,7 +140,7 @@ my-project/
 
 A file in `src/temp.txt` will be ignored by **both** the root `.gitignore` and `src/.gitignore`.
 
-## Platform Considerations
+### Platform Considerations
 
 ::::{grid}
 :::{grid-item-card} Case Sensitivity
@@ -156,7 +160,7 @@ However, be aware that line endings can affect pattern matching in edge cases.
 :::
 ::::
 
-## Practical Examples
+### Practical Examples
 
 ::::{tabs}
 :::{tab} Python
@@ -263,7 +267,7 @@ coverage.xml
 :::
 ::::
 
-## Pattern Testing
+### Pattern Testing
 
 You can test your patterns before committing using:
 
@@ -274,4 +278,6 @@ git check-ignore -v path/to/file
 This shows which pattern (if any) is causing a file to be ignored.
 
 {% endif %}
+{% if slide %}
 :::::
+{% endif %}

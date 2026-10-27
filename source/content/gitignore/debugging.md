@@ -1,15 +1,19 @@
-{% if slide %}### Debugging & Common Issues{% endif %}
+{% if slide %}
+### Debugging & Common Issues
 
-:::::{card}{% if page %} Debugging & Common Issues{% endif %}
+:::::{card}
+{% else %}
+## Debugging & Common Issues
+{% endif %}
 
-## The Tracked Files Problem
+### The Tracked Files Problem
 
 {% if page %}
 **⚠️ IMPORTANT: This is the most common .gitignore misunderstanding**
 
 Adding a file to `.gitignore` **does NOT remove it** from the repository if it's already being tracked by Git.
 
-### Why This Happens
+#### Why This Happens
 
 When you run `git add file.txt`, Git starts tracking `file.txt`.
 If you later add `file.txt` to `.gitignore`, Git continues to track it because:
@@ -18,7 +22,7 @@ If you later add `file.txt` to `.gitignore`, Git continues to track it because:
 2. `.gitignore` only prevents **untracked** files from being added
 3. Already-tracked files remain in the index
 
-### The Solution
+#### The Solution
 
 To stop tracking a file that's already in the repository:
 
@@ -33,7 +37,7 @@ git rm file.txt
 **⚠️ CAUTION**: This doesn't remove the file from Git history.
 To completely purge a file from history, you need `git filter-repo` or similar tools.
 
-### Example Workflow
+#### Example Workflow
 
 ```bash
 # Oops! I committed my API key
@@ -63,7 +67,7 @@ $ git status
 #         .env
 ```
 
-## Common Mistakes & Gotchas
+### Common Mistakes & Gotchas
 
 ::::{grid}
 :::{grid-item-card} Wrong Directory
@@ -101,9 +105,9 @@ $ git status
 
 {% endif %}
 
-## Debugging Tools
+### Debugging Tools
 
-### git check-ignore
+#### git check-ignore
 
 The most important debugging tool for `.gitignore`:
 
@@ -126,7 +130,7 @@ git check-ignore --debug -v path/to/file
 - `-v` / `--verbose`: Show which pattern matched
 - `--debug`: Show detailed matching information
 
-### git status
+#### git status
 
 Use `git status` to see which files are tracked vs. ignored:
 
@@ -144,7 +148,7 @@ git status --porcelain | grep '^!!'
 - `M` = Modified
 - `A` = Added to index
 
-### git ls-files
+#### git ls-files
 
 List all files tracked by Git (including those in index):
 
@@ -159,7 +163,7 @@ git ls-files --others --exclude-standard
 git ls-files --others --ignored --exclude-standard
 ```
 
-## Self-Assessment Questions
+### Self-Assessment Questions
 
 Test your understanding with these questions:
 
@@ -245,7 +249,7 @@ D) Neither
 
 {% endif %}
 
-## Troubleshooting Guide
+### Troubleshooting Guide
 
 | Symptom | Possible Cause | Solution |
 |---------|---------------|----------|
@@ -256,4 +260,6 @@ D) Neither
 | Different behavior on different OS | Case sensitivity or line endings | Use both cases, be explicit |
 | Slow `git status` with many patterns | Too many complex patterns | Simplify patterns, use directory-specific files |
 
+{% if slide %}
 :::::
+{% endif %}
