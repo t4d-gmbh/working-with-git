@@ -6,7 +6,7 @@
 
 /** Run with: node --test tests/slide-layout.test.cjs */
 const assert = require("node:assert/strict");
-const { readFileSync } = require("node:fs");
+const { readFileSync, readdirSync } = require("node:fs");
 const { join } = require("node:path");
 const { test } = require("node:test");
 
@@ -33,47 +33,56 @@ test("only collapsed desktop slides are constrained and horizontally centred", (
 test("the slide wrapper uses CSS instead of an overriding inline width", () => {
   assert.match(
     template,
-    /{% if build == "slides" %}\s*<div class="slide-frame">\s*<div id=['"]rescaled-text['"][^>]*>/,
+    /{% if build == "slides" %}\s*<div class="slide-frame">\s*<div id=['"]rescaled-text['"]>/,
   );
   assert.match(css, /\.slide-frame\s*\{[^}]*width:\s*95%;[^}]*\}/);
   assert.match(css, /\.slide-frame\s*\{[^}]*height:\s*80vh;[^}]*\}/);
 });
 
-test("only the eleven cycle-status slide documents receive the numbering marker", () => {
+test("only the eleven cycle-status headings opt into the shared slide-only styling", () => {
+  const sourceDirectory = join(__dirname, "../source");
   const index = readFileSync(
-    join(__dirname, "../source/content/update_cycle/index.md"), "utf8",
+    join(sourceDirectory, "content/update_cycle/index.md"), "utf8",
   );
   const toctree = index.match(/```\{toctree\}\n([\s\S]*?)\n```/);
   assert.ok(toctree);
   const expected = [...toctree[1].matchAll(/^\.\/(\S+)$/gm)]
-    .map(match => `content/update_cycle/${match[1]}`);
+    .map(match => `content/update_cycle/${match[1]}.md`);
   assert.equal(expected.length, 11);
-  const scope = template.match(
-    /{% if pagename in \[([\s\S]*?)\] %} class="cycle-status-slide"{% endif %}/,
-  );
-  assert.ok(scope, "Use an explicit allowlist, not a chapter-wide path prefix");
-  const actual = [...scope[1].matchAll(/"([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(actual, expected);
-  for (const excluded of [
-    "content/update_cycle/index", "content/update_cycle/future_step", "content/gitignore/syntax",
-  ]) {
-    assert.ok(!actual.includes(excluded), excluded);
+  const actual = readdirSync(sourceDirectory, { recursive: true })
+    .filter(name => name.endsWith(".md"))
+    .filter(name => readFileSync(join(sourceDirectory, name), "utf8")
+      .includes('class="update-cycle-status"'));
+  assert.deepEqual(actual.sort(), [...expected].sort());
+  for (const name of expected) {
+    const source = readFileSync(join(sourceDirectory, name), "utf8");
+    const slideOnly = source.match(/^{% if slide %}\n([\s\S]*?)\n{% endif %}/);
+    assert.ok(slideOnly, name);
+    assert.match(slideOnly[1], /```\{include\} \.\/_status_heading_style\.inc\n```/);
+    const heading = slideOnly[1].match(/^### <span class="update-cycle-status">(.+)<\/span>$/m);
+    assert.ok(heading, name);
+    assert.equal((heading[1].match(/\{octicon\}`sync;0\.8em`/g) || []).length, 2, name);
+    assert.doesNotMatch(source.replace(slideOnly[0], ""), /update-cycle-status|_status_heading_style/);
   }
-  const slides = template.match(/{% if build == "slides" %}\s*<div class="slide-frame">([\s\S]*?)\n{% else %}/);
-  assert.ok(slides);
-  assert.ok(slides[1].includes(scope[0]), "The marker must be slide-only and inside the body wrapper");
-  assert.match(slides[1], /<div id='rescaled-text'{% if pagename in/);
-  assert.equal((template.match(/cycle-status-slide/g) || []).length, 1);
 });
 
-test("the numbering rule targets only the first main heading's generated number", () => {
-  const rules = [...css.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
+test("the shared fragment hides only the generated number of a marked heading", () => {
+  const fragment = readFileSync(
+    join(__dirname, "../source/content/update_cycle/_status_heading_style.inc"), "utf8",
+  );
+  assert.match(fragment, /^```\{raw\} html\n<style>\n[\s\S]*\n<\/style>\n```\n$/);
+  const rules = [...fragment.matchAll(/([^{}]+)\{([^{}]*)\}/g)]
     .filter(match => match[1].includes(".section-number"));
   assert.equal(rules.length, 1);
-  const selector = rules[0][1].replace(/\/\*[\s\S]*?\*\//g, "").trim();
+  const selector = rules[0][1].split("<style>\n")[1].trim();
   assert.equal(
     selector,
-    ".cycle-status-slide > section:first-of-type > :is(h1, h2, h3, h4, h5, h6):first-child > .section-number",
+    ":is(h1, h2, h3, h4, h5, h6):has(> .update-cycle-status) > .section-number",
   );
   assert.equal(rules[0][2].trim(), "display: none;");
+});
+
+test("cycle-heading styling no longer depends on the standalone template or stylesheet", () => {
+  assert.doesNotMatch(template, /cycle-status-slide|update-cycle-status|content\/update_cycle/);
+  assert.doesNotMatch(css, /cycle-status-slide|update-cycle-status|\.section-number/);
 });

@@ -11,6 +11,7 @@ This is a selection of commands that can particularly enhance your experience wi
 ./checkout
 ./stash
 ./cherry_pick
+./worktree
 ```
 {% else %}
 <!-- BUILDING THE PAGES -->
@@ -32,6 +33,11 @@ This is a selection of commands that can particularly enhance your experience wi
 ::::
 ::::{dropdown} git cherry-pick &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-cherry-pick)
 ```{include} ./cherry_pick.md
+:start-after: <!-- pages-include -->
+```
+::::
+::::{dropdown} git worktree &nbsp;[{octicon}`link-external;0.8em`](https://git-scm.com/docs/git-worktree)
+```{include} ./worktree.md
 :start-after: <!-- pages-include -->
 ```
 ::::
